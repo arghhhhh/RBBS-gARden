@@ -14,12 +14,15 @@ public class MainMenuController : MonoBehaviour
     private Button arButton;
     [SerializeField]
     private Button mapButton;
+    [SerializeField]
+    private Button debugButton;
 
     private void Awake()
     {
         infoButton.onClick.AddListener(LoadInfo);
         arButton.onClick.AddListener(LoadAR);
         mapButton.onClick.AddListener(LoadMap);
+        debugButton.onClick.AddListener(LoadDebug);
     }
 
     void SceneLauncher(int scene)
@@ -40,5 +43,10 @@ public class MainMenuController : MonoBehaviour
     void LoadMap()
     {
         SceneLauncher(1);
+    }
+
+    void LoadDebug()
+    {
+        SceneLauncher(2);
     }
 }

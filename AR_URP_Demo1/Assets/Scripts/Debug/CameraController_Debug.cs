@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.UI;
 
-public class CameraController : MonoBehaviour
+public class CameraController_Debug : MonoBehaviour
 {
     private Text buttonText;
     private bool isCamEnabled;

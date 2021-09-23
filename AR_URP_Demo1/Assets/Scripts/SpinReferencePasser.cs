@@ -15,7 +15,7 @@ public class SpinReferencePasser : MonoBehaviour
     {
         //instantiate spin button instance and set its parent to be the Canvas
         GameObject spinButton = Instantiate(spinButtonPrefab, transform.localPosition-new Vector3(0f,300f,0f), Quaternion.identity);
-        UIManager UI = FindObjectOfType<UIManager>(); //only UIManager in the scene is attached to canvas
+        Canvas UI = FindObjectOfType<Canvas>(); //only UIManager in the scene is attached to canvas
         spinButton.transform.SetParent(UI.gameObject.transform, false);
 
         //pass this specific prefab reference to its own spin controller

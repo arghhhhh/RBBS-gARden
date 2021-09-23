@@ -1,9 +1,7 @@
 App to do list, sorted by priority
 	__TODAY__
-	[*] Make QR scan animated graphic to use in app tutorial
-		- A job for after effects
-	[*] Make debug scene its own scene, separate from the AR tour scene
-		- That way I can keep the debugging properties for when I need em
+	
+	
 
 	__FUTURE__
 	[*] Make overhead map view with GPS
@@ -19,3 +17,8 @@ App to do list, sorted by priority
 		- Amazingly quick response from dev helped me get it fixed
 	[X] Build iOS app with Xcode signature
 		- Had to override app bundle identifier to com.LunarMultimedia.FirstRealTryAR
+	[X] Make QR scan animated graphic to use in app tutorial
+		- Used GlueIT to make the sprite sheet. There seems to be a glitch on one of the frames.
+			- Also seems low res. I might be better off animating reg images instead of using sprites
+	[X] Make debug scene its own scene, separate from the AR tour scene
+		- Added a debug button to main menu that takes me there
