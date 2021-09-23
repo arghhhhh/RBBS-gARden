@@ -1,0 +1,3 @@
+Dora talks to herself document: (aka Rubber ducky)
+
+I could change the audio mixer group of an object outside the frame to one that includes an already set lowpass filter
