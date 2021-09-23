@@ -1,13 +1,21 @@
 App to do list, sorted by priority
-	[X] Build Intro/Menu page that links to AR Camera
-		- Need to create a mockup and then Demo in inVision just in case I can't get the iPhone working right away
-	[X] Set up Unity app for iPhone
-		- Jorge is getting a new phone on Friday. Definite priority once I get my hands on his old phone
+	__TODAY__
+	[*] Make QR scan animated graphic to use in app tutorial
+		- A job for after effects
+	[*] Make debug scene its own scene, separate from the AR tour scene
+		- That way I can keep the debugging properties for when I need em
+
+	__FUTURE__
 	[*] Make overhead map view with GPS
 		- Need an overhead map I can use at FDR so I don't need to test at RBBS
 	[ ] Create GPS indicators that work using the AR+GPS package
 		- Need reference points at FDR to test with
 	[ ] Make third mixer group that simulates a lerp between the default and lowpass mixer groups
-		- Like a fat mission. But is it?
 		- Expose lowpass property to script
 		- lerpdownMixerGroup.audioMixer.SetFloat(LerpDownLP)
+
+9/23
+	[X] Fix iOS Project Builder on Surface Tablet and purchase activation license
+		- Amazingly quick response from dev helped me get it fixed
+	[X] Build iOS app with Xcode signature
+		- Had to override app bundle identifier to com.LunarMultimedia.FirstRealTryAR
