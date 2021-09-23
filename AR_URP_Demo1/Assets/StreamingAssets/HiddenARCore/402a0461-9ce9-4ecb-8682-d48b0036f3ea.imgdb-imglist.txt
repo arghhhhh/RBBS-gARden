@@ -1,4 +1,0 @@
-b7b4bb8e7f064256a200fc26f7f78a40|C:\Users\Joss\Desktop\Random\HUBB\RBBS-gARden\AR_URP_Demo1\Assets\Resources\Image Tracking\pwhite.png|0.2
-e9f3da79b83946cf8f649d6756b428ac|C:\Users\Joss\Desktop\Random\HUBB\RBBS-gARden\AR_URP_Demo1\Assets\Resources\Image Tracking\pblue.png|0.2
-73a4a62e55954dfb8640719674e83246|C:\Users\Joss\Desktop\Random\HUBB\RBBS-gARden\AR_URP_Demo1\Assets\Resources\Image Tracking\pred.png|0.2
-aaf9b32460a34d8c9dbb30079a72e955|C:\Users\Joss\Desktop\Random\HUBB\RBBS-gARden\AR_URP_Demo1\Assets\Resources\Image Tracking\pgreen.png|0.2
