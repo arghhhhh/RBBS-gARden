@@ -13,9 +13,6 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private GameObject inspectParent;
 
-    public Text debugText;
-    public Text debugTextValue;
-
     void Start()
     {
         gpsButton.onClick.AddListener(GpsButtonPress);

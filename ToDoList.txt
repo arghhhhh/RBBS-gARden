@@ -1,9 +1,14 @@
 App to do list, sorted by priority
 	__TODAY__
-	
-	
+	[**] Fix audio playback on iOS
+		- Was this never working? Guess not
+	[*] Learn to install the iOS app the normal (non-Cydia) way
+		- Seems like something that'd be important at some point	
 
 	__FUTURE__
+	[*] Change QR graphic to raw image instead of sprite
+		- Should help the image sequence be less glitchy/higher res
+		- Need my laptop PC for this
 	[*] Make overhead map view with GPS
 		- Need an overhead map I can use at FDR so I don't need to test at RBBS
 	[ ] Create GPS indicators that work using the AR+GPS package
@@ -22,3 +27,13 @@ App to do list, sorted by priority
 			- Also seems low res. I might be better off animating reg images instead of using sprites
 	[X] Make debug scene its own scene, separate from the AR tour scene
 		- Added a debug button to main menu that takes me there
+9/27
+	[X] Fix image tracking on iPhone
+		- Setting ARTrackedImageManager's "Max Number of Moving Targets" to more than 0 fixed this
+	[X] Fix QR graphic slicing and made into POT texture
+		- POT textures must have a power of two for width and height 
+			- I should upgrade mine to 8196x8196
+	[X] Disabled line tracing for planes in AR tour scene
+		- Still need to get shadows working
+	[X] Design and print description/QR cards for trees outside
+		- These need a redesign but they work for now and I'd love to save paper

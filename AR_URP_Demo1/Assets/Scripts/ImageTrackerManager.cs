@@ -22,6 +22,7 @@ public class ImageTrackerManager : MonoBehaviour
 
     //text used for debugging
     //public Text debugText;
+    //public Text debugTextValue;
 
     void Awake()
     {
@@ -87,11 +88,16 @@ public class ImageTrackerManager : MonoBehaviour
             allObjects[trackedImage.referenceImage.name].transform.rotation = trackedImage.transform.rotation;
             allObjects[trackedImage.referenceImage.name].transform.Rotate(90, 0, 0); //rotate image prefab to correct orientation
         }
-        else //if tracked image tracking state is limited or none 
+        else //if tracked image tracking state is none 
         {
             //deactivate the image tracked ar object 
             allObjects[trackedImage.referenceImage.name].SetActive(false);
         }
+        //if (debugText || debugTextValue) //check if debug text has been assigned in inspector
+        //{
+        //    debugText.text = allObjects[trackedImage.referenceImage.name].name;
+        //    debugTextValue.text = "Tracking state: " + trackedImage.trackingState.ToString();
+        //}
     }
 
     public void OnImageChanged(ARTrackedImagesChangedEventArgs args)

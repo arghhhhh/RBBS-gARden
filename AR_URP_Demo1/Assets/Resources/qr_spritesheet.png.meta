@@ -1,181 +1,181 @@
 fileFormatVersion: 2
-guid: 90d0b0a3fb6631144b8742d0ce091465
+guid: fbaf6da0a1db9cd499cf546c38d7d2dc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4665941161821527041
-    second: qr_spritesheet 1_0
+      213: -9001922389032299223
+    second: qr_spritesheet_0
   - first:
-      213: 3630411018709005642
-    second: qr_spritesheet 1_1
+      213: -4419801934309044374
+    second: qr_spritesheet_1
   - first:
-      213: 6683258582515722874
-    second: qr_spritesheet 1_2
+      213: -3735668356672483355
+    second: qr_spritesheet_2
   - first:
-      213: -1026995725770959684
-    second: qr_spritesheet 1_3
+      213: -5848099096309367981
+    second: qr_spritesheet_3
   - first:
-      213: 470469529696644442
-    second: qr_spritesheet 1_4
+      213: 1634358342749993850
+    second: qr_spritesheet_4
   - first:
-      213: -6607378382700016138
-    second: qr_spritesheet 1_5
+      213: -6080809695575293645
+    second: qr_spritesheet_5
   - first:
-      213: 2617408426967367234
-    second: qr_spritesheet 1_6
+      213: -6130929277039280525
+    second: qr_spritesheet_6
   - first:
-      213: 6779372731188088844
-    second: qr_spritesheet 1_7
+      213: 6004869973025810349
+    second: qr_spritesheet_7
   - first:
-      213: -5802464826957980918
-    second: qr_spritesheet 1_8
+      213: -304370535332136584
+    second: qr_spritesheet_8
   - first:
-      213: 2228623798440088731
-    second: qr_spritesheet 1_9
+      213: 5402372223452200634
+    second: qr_spritesheet_9
   - first:
-      213: -6602696076119866295
-    second: qr_spritesheet 1_10
+      213: 6908365652334474971
+    second: qr_spritesheet_10
   - first:
-      213: 8956975782777462529
-    second: qr_spritesheet 1_11
+      213: -4905568652891793128
+    second: qr_spritesheet_11
   - first:
-      213: 1336602394835341948
-    second: qr_spritesheet 1_12
+      213: -8651992816903031315
+    second: qr_spritesheet_12
   - first:
-      213: -6197247636521171487
-    second: qr_spritesheet 1_13
+      213: 4261728552798487385
+    second: qr_spritesheet_13
   - first:
-      213: 700583400521136716
-    second: qr_spritesheet 1_14
+      213: 999893493505178578
+    second: qr_spritesheet_14
   - first:
-      213: 1188975916832377255
-    second: qr_spritesheet 1_15
+      213: 242169857755747395
+    second: qr_spritesheet_15
   - first:
-      213: 7787545767381920393
-    second: qr_spritesheet 1_16
+      213: 4460714534247504771
+    second: qr_spritesheet_16
   - first:
-      213: -369753465649398883
-    second: qr_spritesheet 1_17
+      213: -3599031376690337493
+    second: qr_spritesheet_17
   - first:
-      213: 6491271960470008025
-    second: qr_spritesheet 1_18
+      213: 2284540037432417666
+    second: qr_spritesheet_18
   - first:
-      213: -3705362399100020145
-    second: qr_spritesheet 1_19
+      213: 3927277709983735675
+    second: qr_spritesheet_19
   - first:
-      213: -5377985002694135848
-    second: qr_spritesheet 1_20
+      213: -6985939741542517850
+    second: qr_spritesheet_20
   - first:
-      213: -4256189529184194876
-    second: qr_spritesheet 1_21
+      213: -5326284478369532854
+    second: qr_spritesheet_21
   - first:
-      213: -3646325123302013443
-    second: qr_spritesheet 1_22
+      213: 6541873701996488546
+    second: qr_spritesheet_22
   - first:
-      213: 1399025620050259712
-    second: qr_spritesheet 1_23
+      213: 6013365143816569016
+    second: qr_spritesheet_23
   - first:
-      213: 5506010297193075615
-    second: qr_spritesheet 1_24
+      213: 731451099522850009
+    second: qr_spritesheet_24
   - first:
-      213: -2101961005272134451
-    second: qr_spritesheet 1_25
+      213: -470497454713123175
+    second: qr_spritesheet_25
   - first:
-      213: 5190173140866698476
-    second: qr_spritesheet 1_26
+      213: 5755030688710795357
+    second: qr_spritesheet_26
   - first:
-      213: -4990878079639314782
-    second: qr_spritesheet 1_27
+      213: -599541015921096230
+    second: qr_spritesheet_27
   - first:
-      213: 8466523403768179014
-    second: qr_spritesheet 1_28
+      213: -2941796658807079156
+    second: qr_spritesheet_28
   - first:
-      213: -4838824067903692233
-    second: qr_spritesheet 1_29
+      213: 76919144934622670
+    second: qr_spritesheet_29
   - first:
-      213: 1727569486036342318
-    second: qr_spritesheet 1_30
+      213: -211021346947361137
+    second: qr_spritesheet_30
   - first:
-      213: -2344265492964968250
-    second: qr_spritesheet 1_31
+      213: -8469419419106708902
+    second: qr_spritesheet_31
   - first:
-      213: 3407883293267161036
-    second: qr_spritesheet 1_32
+      213: 2612955648231391958
+    second: qr_spritesheet_32
   - first:
-      213: -9043464829048825021
-    second: qr_spritesheet 1_33
+      213: 7221062008759072332
+    second: qr_spritesheet_33
   - first:
-      213: -7954869796941763512
-    second: qr_spritesheet 1_34
+      213: -7987630216771541178
+    second: qr_spritesheet_34
   - first:
-      213: -815230516461194749
-    second: qr_spritesheet 1_35
+      213: 2161722915769784500
+    second: qr_spritesheet_35
   - first:
-      213: -5738626450276391796
-    second: qr_spritesheet 1_36
+      213: -8454103803330301572
+    second: qr_spritesheet_36
   - first:
-      213: -4867875640958849030
-    second: qr_spritesheet 1_37
+      213: -4010007079718481544
+    second: qr_spritesheet_37
   - first:
-      213: 3152427713057446424
-    second: qr_spritesheet 1_38
+      213: 7348968025239321493
+    second: qr_spritesheet_38
   - first:
-      213: -436118380117994903
-    second: qr_spritesheet 1_39
+      213: -4902303893080687906
+    second: qr_spritesheet_39
   - first:
-      213: 5834892765824649094
-    second: qr_spritesheet 1_40
+      213: -6516259927699824563
+    second: qr_spritesheet_40
   - first:
-      213: 8512584901638676952
-    second: qr_spritesheet 1_41
+      213: -58917296171038466
+    second: qr_spritesheet_41
   - first:
-      213: 5859124386357581771
-    second: qr_spritesheet 1_42
+      213: 1079933873376654671
+    second: qr_spritesheet_42
   - first:
-      213: 1653743779044993215
-    second: qr_spritesheet 1_43
+      213: 8733086342476922244
+    second: qr_spritesheet_43
   - first:
-      213: 4142396504386075760
-    second: qr_spritesheet 1_44
+      213: 8671080472134982563
+    second: qr_spritesheet_44
   - first:
-      213: -1179156891588063583
-    second: qr_spritesheet 1_45
+      213: 6581047905467063247
+    second: qr_spritesheet_45
   - first:
-      213: 4865809956930044790
-    second: qr_spritesheet 1_46
+      213: 547748934823418284
+    second: qr_spritesheet_46
   - first:
-      213: -1631546831554427673
-    second: qr_spritesheet 1_47
+      213: 8996256232120063464
+    second: qr_spritesheet_47
   - first:
-      213: 1342883114168777434
-    second: qr_spritesheet 1_48
+      213: 3544295409830236216
+    second: qr_spritesheet_48
   - first:
-      213: 4404419919725091985
-    second: qr_spritesheet 1_49
+      213: -5551413844710303053
+    second: qr_spritesheet_49
   - first:
-      213: 6282338154938677523
-    second: qr_spritesheet 1_50
+      213: 114949907190331551
+    second: qr_spritesheet_50
   - first:
-      213: -3600846738546776438
-    second: qr_spritesheet 1_51
+      213: 7757915723797843082
+    second: qr_spritesheet_51
   - first:
-      213: -1601534458247380064
-    second: qr_spritesheet 1_52
+      213: 3349509447608433833
+    second: qr_spritesheet_52
   - first:
-      213: 7233713063344823406
-    second: qr_spritesheet 1_53
+      213: 7331777093948402857
+    second: qr_spritesheet_53
   - first:
-      213: 98796215550079920
-    second: qr_spritesheet 1_54
+      213: 3905001209294383135
+    second: qr_spritesheet_54
   - first:
-      213: -7109321108591830930
-    second: qr_spritesheet 1_55
+      213: 8137514653549153518
+    second: qr_spritesheet_55
   - first:
-      213: 4089342670535834932
-    second: qr_spritesheet 1_56
+      213: 4501384823229867415
+    second: qr_spritesheet_56
   - first:
-      213: -1967406592234592737
-    second: qr_spritesheet 1_57
+      213: -4627677203296867194
+    second: qr_spritesheet_57
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -242,7 +242,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -254,7 +254,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -266,7 +266,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -278,7 +278,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -289,13 +289,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: qr_spritesheet 1_0
+      name: qr_spritesheet_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 2730.8572
+        y: 3640.889
         width: 455.1111
-        height: 455.14285
+        height: 455.1111
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -303,20 +303,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ff321ca0c3f3f3fb0800000000000000
-      internalID: -4665941161821527041
+      spriteID: 925181a084fb21380800000000000000
+      internalID: -9001922389032299223
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: qr_spritesheet 1_1
+      name: qr_spritesheet_1
       rect:
         serializedVersion: 2
         x: 455
-        y: 2730.8572
+        y: 3640.889
         width: 455.1111
-        height: 455.14285
+        height: 455.1111
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -324,20 +324,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4570d6369fc16230800000000000000
-      internalID: 3630411018709005642
+      spriteID: a6fccefce85b9a2c0800000000000000
+      internalID: -4419801934309044374
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: qr_spritesheet 1_2
+      name: qr_spritesheet_2
       rect:
         serializedVersion: 2
         x: 910
-        y: 2730.8572
+        y: 3640.889
         width: 455.1111
-        height: 455.14285
+        height: 455.1111
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -345,20 +345,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a7a2ee87544bfbc50800000000000000
-      internalID: 6683258582515722874
+      spriteID: 5ef8ed90c6d382cc0800000000000000
+      internalID: -3735668356672483355
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: qr_spritesheet 1_3
+      name: qr_spritesheet_3
       rect:
         serializedVersion: 2
         x: 1365
-        y: 2730.8572
+        y: 3640.889
         width: 455.1111
-        height: 455.14285
+        height: 455.1111
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -366,20 +366,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb4d39324d06fb1f0800000000000000
-      internalID: -1026995725770959684
+      spriteID: 35b72314bd067dea0800000000000000
+      internalID: -5848099096309367981
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: qr_spritesheet 1_4
+      name: qr_spritesheet_4
       rect:
         serializedVersion: 2
         x: 1820
-        y: 2730.8572
+        y: 3640.889
         width: 455.1111
-        height: 455.14285
+        height: 455.1111
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -387,20 +387,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a5da63b6b81778600800000000000000
-      internalID: 470469529696644442
+      spriteID: a7b3f47e0486ea610800000000000000
+      internalID: 1634358342749993850
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: qr_spritesheet 1_5
+      name: qr_spritesheet_5
       rect:
         serializedVersion: 2
         x: 2275
-        y: 2730.8572
+        y: 3640.889
         width: 455.1111
-        height: 455.14285
+        height: 455.1111
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -408,20 +408,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6fd029a4e50ed44a0800000000000000
-      internalID: -6607378382700016138
+      spriteID: 331cb74accf9c9ba0800000000000000
+      internalID: -6080809695575293645
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: qr_spritesheet 1_6
+      name: qr_spritesheet_6
       rect:
         serializedVersion: 2
         x: 2730
-        y: 2730.8572
+        y: 3640.889
         width: 455.1111
-        height: 455.14285
+        height: 455.1111
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -429,20 +429,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 24ef081c817e25420800000000000000
-      internalID: 2617408426967367234
+      spriteID: 37ef70b3e409aeaa0800000000000000
+      internalID: -6130929277039280525
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: qr_spritesheet 1_7
+      name: qr_spritesheet_7
       rect:
         serializedVersion: 2
         x: 3185
-        y: 2730.8572
+        y: 3640.889
         width: 455.1111
-        height: 455.14285
+        height: 455.1111
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -450,20 +450,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c009f62949b251e50800000000000000
-      internalID: 6779372731188088844
+      spriteID: da7ec90ec65955350800000000000000
+      internalID: 6004869973025810349
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: qr_spritesheet 1_8
+      name: qr_spritesheet_8
       rect:
         serializedVersion: 2
         x: 3640
-        y: 2730.8572
+        y: 3640.889
         width: 455.1111
-        height: 455.14285
+        height: 455.1111
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -471,20 +471,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a0b987f8bf0897fa0800000000000000
-      internalID: -5802464826957980918
+      spriteID: 879be695c98a6cbf0800000000000000
+      internalID: -304370535332136584
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: qr_spritesheet 1_9
+      name: qr_spritesheet_9
       rect:
         serializedVersion: 2
         x: 0
-        y: 2275.8572
+        y: 3185.889
         width: 455.1111
-        height: 455.14285
+        height: 455.1111
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -492,20 +492,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b94d0047989adee10800000000000000
-      internalID: 2228623798440088731
+      spriteID: abe3e4b0ae419fa40800000000000000
+      internalID: 5402372223452200634
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: qr_spritesheet 1_10
+      name: qr_spritesheet_10
       rect:
         serializedVersion: 2
         x: 455
-        y: 2275.8572
+        y: 3185.889
         width: 455.1111
-        height: 455.14285
+        height: 455.1111
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -513,20 +513,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 944820fb6e28e54a0800000000000000
-      internalID: -6602696076119866295
+      spriteID: bd6f7ed65f17fdf50800000000000000
+      internalID: 6908365652334474971
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: qr_spritesheet 1_11
+      name: qr_spritesheet_11
       rect:
         serializedVersion: 2
         x: 910
-        y: 2275.8572
+        y: 3185.889
         width: 455.1111
-        height: 455.14285
+        height: 455.1111
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -534,20 +534,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 10f1a32b4029d4c70800000000000000
-      internalID: 8956975782777462529
+      spriteID: 819d71f0d4bebebb0800000000000000
+      internalID: -4905568652891793128
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: qr_spritesheet 1_12
+      name: qr_spritesheet_12
       rect:
         serializedVersion: 2
         x: 1365
-        y: 2275.8572
+        y: 3185.889
         width: 455.1111
-        height: 455.14285
+        height: 455.1111
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -555,20 +555,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c72d816ebc09c8210800000000000000
-      internalID: 1336602394835341948
+      spriteID: de5734d8f52fde780800000000000000
+      internalID: -8651992816903031315
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: qr_spritesheet 1_13
+      name: qr_spritesheet_13
       rect:
         serializedVersion: 2
         x: 1820
-        y: 2275.8572
+        y: 3185.889
         width: 455.1111
-        height: 455.14285
+        height: 455.1111
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -576,20 +576,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e5c608eb14fef9a0800000000000000
-      internalID: -6197247636521171487
+      spriteID: 95381b60a83b42b30800000000000000
+      internalID: 4261728552798487385
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: qr_spritesheet 1_14
+      name: qr_spritesheet_14
       rect:
         serializedVersion: 2
         x: 2275
-        y: 2275.8572
+        y: 3185.889
         width: 455.1111
-        height: 455.14285
+        height: 455.1111
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -597,20 +597,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c4af89314e8f8b900800000000000000
-      internalID: 700583400521136716
+      spriteID: 2dbb99da5d550ed00800000000000000
+      internalID: 999893493505178578
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: qr_spritesheet 1_15
+      name: qr_spritesheet_15
       rect:
         serializedVersion: 2
         x: 2730
-        y: 2275.8572
+        y: 3185.889
         width: 455.1111
-        height: 455.14285
+        height: 455.1111
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -618,20 +618,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7a9c9410c47108010800000000000000
-      internalID: 1188975916832377255
+      spriteID: 34496dad33c5c5300800000000000000
+      internalID: 242169857755747395
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: qr_spritesheet 1_16
+      name: qr_spritesheet_16
       rect:
         serializedVersion: 2
         x: 3185
-        y: 2275.8572
+        y: 3185.889
         width: 455.1111
-        height: 455.14285
+        height: 455.1111
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -639,20 +639,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98a65e08d9be21c60800000000000000
-      internalID: 7787545767381920393
+      spriteID: 38b9e3a2c34a7ed30800000000000000
+      internalID: 4460714534247504771
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: qr_spritesheet 1_17
+      name: qr_spritesheet_17
       rect:
         serializedVersion: 2
         x: 3640
-        y: 2275.8572
+        y: 3185.889
         width: 455.1111
-        height: 455.14285
+        height: 455.1111
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -660,20 +660,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d9b7f799e2f5edaf0800000000000000
-      internalID: -369753465649398883
+      spriteID: b2923e8080cad0ec0800000000000000
+      internalID: -3599031376690337493
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: qr_spritesheet 1_18
+      name: qr_spritesheet_18
       rect:
         serializedVersion: 2
         x: 0
-        y: 1820.8572
+        y: 2730.889
         width: 455.1111
-        height: 455.14285
+        height: 455.1111
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -681,20 +681,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d0b440b471a51a50800000000000000
-      internalID: 6491271960470008025
+      spriteID: 28d115e5f0154bf10800000000000000
+      internalID: 2284540037432417666
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: qr_spritesheet 1_19
+      name: qr_spritesheet_19
       rect:
         serializedVersion: 2
         x: 455
-        y: 1820.8572
+        y: 2730.889
         width: 455.1111
-        height: 455.14285
+        height: 455.1111
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -702,20 +702,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f4add85a788e39cc0800000000000000
-      internalID: -3705362399100020145
+      spriteID: b7fd3e5054e708630800000000000000
+      internalID: 3927277709983735675
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: qr_spritesheet 1_20
+      name: qr_spritesheet_20
       rect:
         serializedVersion: 2
         x: 910
-        y: 1820.8572
+        y: 2730.889
         width: 455.1111
-        height: 455.14285
+        height: 455.1111
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -723,20 +723,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8dfa903422f8d55b0800000000000000
-      internalID: -5377985002694135848
+      spriteID: 6a3f21371d4fc0f90800000000000000
+      internalID: -6985939741542517850
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: qr_spritesheet 1_21
+      name: qr_spritesheet_21
       rect:
         serializedVersion: 2
         x: 1365
-        y: 1820.8572
+        y: 2730.889
         width: 455.1111
-        height: 455.14285
+        height: 455.1111
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -744,20 +744,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ce2d386c2afee4c0800000000000000
-      internalID: -4256189529184194876
+      spriteID: a447b1e9c7c3516b0800000000000000
+      internalID: -5326284478369532854
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: qr_spritesheet 1_22
+      name: qr_spritesheet_22
       rect:
         serializedVersion: 2
         x: 1820
-        y: 1820.8572
+        y: 2730.889
         width: 455.1111
-        height: 455.14285
+        height: 455.1111
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -765,20 +765,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df540029e96a56dc0800000000000000
-      internalID: -3646325123302013443
+      spriteID: 26768fcb87769ca50800000000000000
+      internalID: 6541873701996488546
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: qr_spritesheet 1_23
+      name: qr_spritesheet_23
       rect:
         serializedVersion: 2
         x: 2275
-        y: 1820.8572
+        y: 2730.889
         width: 455.1111
-        height: 455.14285
+        height: 455.1111
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -786,20 +786,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00f24ca93665a6310800000000000000
-      internalID: 1399025620050259712
+      spriteID: 8b007e5fcb3c37350800000000000000
+      internalID: 6013365143816569016
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: qr_spritesheet 1_24
+      name: qr_spritesheet_24
       rect:
         serializedVersion: 2
         x: 2730
-        y: 1820.8572
+        y: 2730.889
         width: 455.1111
-        height: 455.14285
+        height: 455.1111
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -807,20 +807,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f9316d57137496c40800000000000000
-      internalID: 5506010297193075615
+      spriteID: 9dcd0ad46e2a62a00800000000000000
+      internalID: 731451099522850009
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: qr_spritesheet 1_25
+      name: qr_spritesheet_25
       rect:
         serializedVersion: 2
         x: 3185
-        y: 1820.8572
+        y: 2730.889
         width: 455.1111
-        height: 455.14285
+        height: 455.1111
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -828,20 +828,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dcc08053a9554d2e0800000000000000
-      internalID: -2101961005272134451
+      spriteID: 99e4918ce057879f0800000000000000
+      internalID: -470497454713123175
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: qr_spritesheet 1_26
+      name: qr_spritesheet_26
       rect:
         serializedVersion: 2
         x: 3640
-        y: 1820.8572
+        y: 2730.889
         width: 455.1111
-        height: 455.14285
+        height: 455.1111
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -849,20 +849,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cec022019f2370840800000000000000
-      internalID: 5190173140866698476
+      spriteID: d5024108be9fddf40800000000000000
+      internalID: 5755030688710795357
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: qr_spritesheet 1_27
+      name: qr_spritesheet_27
       rect:
         serializedVersion: 2
         x: 0
-        y: 1365.8572
+        y: 2275.889
         width: 455.1111
-        height: 455.14285
+        height: 455.1111
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -870,20 +870,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ae90d154d6dcbab0800000000000000
-      internalID: -4990878079639314782
+      spriteID: ad90fbd5f900ea7f0800000000000000
+      internalID: -599541015921096230
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: qr_spritesheet 1_28
+      name: qr_spritesheet_28
       rect:
         serializedVersion: 2
         x: 455
-        y: 1365.8572
+        y: 2275.889
         width: 455.1111
-        height: 455.14285
+        height: 455.1111
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -891,20 +891,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 649222c9d222f7570800000000000000
-      internalID: 8466523403768179014
+      spriteID: c0f7f5e6683ac27d0800000000000000
+      internalID: -2941796658807079156
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: qr_spritesheet 1_29
+      name: qr_spritesheet_29
       rect:
         serializedVersion: 2
         x: 910
-        y: 1365.8572
+        y: 2275.889
         width: 455.1111
-        height: 455.14285
+        height: 455.1111
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -912,20 +912,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7326dfdb52b09dcb0800000000000000
-      internalID: -4838824067903692233
+      spriteID: ec541460e85411100800000000000000
+      internalID: 76919144934622670
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: qr_spritesheet 1_30
+      name: qr_spritesheet_30
       rect:
         serializedVersion: 2
         x: 1365
-        y: 1365.8572
+        y: 2275.889
         width: 455.1111
-        height: 455.14285
+        height: 455.1111
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -933,20 +933,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e2610046b4f89f710800000000000000
-      internalID: 1727569486036342318
+      spriteID: f869d27f33d421df0800000000000000
+      internalID: -211021346947361137
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: qr_spritesheet 1_31
+      name: qr_spritesheet_31
       rect:
         serializedVersion: 2
         x: 1820
-        y: 1365.8572
+        y: 2275.889
         width: 455.1111
-        height: 455.14285
+        height: 455.1111
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -954,20 +954,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c8fd9064fe777fd0800000000000000
-      internalID: -2344265492964968250
+      spriteID: a52795649e3967a80800000000000000
+      internalID: -8469419419106708902
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: qr_spritesheet 1_32
+      name: qr_spritesheet_32
       rect:
         serializedVersion: 2
         x: 2275
-        y: 1365.8572
+        y: 2275.889
         width: 455.1111
-        height: 455.14285
+        height: 455.1111
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -975,20 +975,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ccf6d2baccb3b4f20800000000000000
-      internalID: 3407883293267161036
+      spriteID: 6d2ceaa6155134420800000000000000
+      internalID: 2612955648231391958
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: qr_spritesheet 1_33
+      name: qr_spritesheet_33
       rect:
         serializedVersion: 2
         x: 2730
-        y: 1365.8572
+        y: 2275.889
         width: 455.1111
-        height: 455.14285
+        height: 455.1111
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -996,20 +996,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 34b5ecdf6a82f7280800000000000000
-      internalID: -9043464829048825021
+      spriteID: c46372d53ad563460800000000000000
+      internalID: 7221062008759072332
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: qr_spritesheet 1_34
+      name: qr_spritesheet_34
       rect:
         serializedVersion: 2
         x: 3185
-        y: 1365.8572
+        y: 2275.889
         width: 455.1111
-        height: 455.14285
+        height: 455.1111
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1017,20 +1017,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 84c6dcef010aa9190800000000000000
-      internalID: -7954869796941763512
+      spriteID: 647e72c53ac362190800000000000000
+      internalID: -7987630216771541178
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: qr_spritesheet 1_35
+      name: qr_spritesheet_35
       rect:
         serializedVersion: 2
         x: 3640
-        y: 1365.8572
+        y: 2275.889
         width: 455.1111
-        height: 455.14285
+        height: 455.1111
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1038,20 +1038,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 302b5402a28bfa4f0800000000000000
-      internalID: -815230516461194749
+      spriteID: 4b89741e98bfffd10800000000000000
+      internalID: 2161722915769784500
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: qr_spritesheet 1_36
+      name: qr_spritesheet_36
       rect:
         serializedVersion: 2
         x: 0
-        y: 910.8572
+        y: 1820.8889
         width: 455.1111
-        height: 455.14285
+        height: 455.1111
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1059,20 +1059,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c846d94e5ad4c50b0800000000000000
-      internalID: -5738626450276391796
+      spriteID: c71f734f16dfcaa80800000000000000
+      internalID: -8454103803330301572
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: qr_spritesheet 1_37
+      name: qr_spritesheet_37
       rect:
         serializedVersion: 2
         x: 455
-        y: 910.8572
+        y: 1820.8889
         width: 455.1111
-        height: 455.14285
+        height: 455.1111
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1080,20 +1080,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: affeed945e4d17cb0800000000000000
-      internalID: -4867875640958849030
+      spriteID: 87114929ec79958c0800000000000000
+      internalID: -4010007079718481544
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: qr_spritesheet 1_38
+      name: qr_spritesheet_38
       rect:
         serializedVersion: 2
         x: 910
-        y: 910.8572
+        y: 1820.8889
         width: 455.1111
-        height: 455.14285
+        height: 455.1111
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1101,20 +1101,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 81ad2e08d4cafbb20800000000000000
-      internalID: 3152427713057446424
+      spriteID: 59bf7128b77ccf560800000000000000
+      internalID: 7348968025239321493
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: qr_spritesheet 1_39
+      name: qr_spritesheet_39
       rect:
         serializedVersion: 2
         x: 1365
-        y: 910.8572
+        y: 1820.8889
         width: 455.1111
-        height: 455.14285
+        height: 455.1111
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1122,20 +1122,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9625c09d4a892f9f0800000000000000
-      internalID: -436118380117994903
+      spriteID: eda39ef259487fbb0800000000000000
+      internalID: -4902303893080687906
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: qr_spritesheet 1_40
+      name: qr_spritesheet_40
       rect:
         serializedVersion: 2
         x: 1820
-        y: 910.8572
+        y: 1820.8889
         width: 455.1111
-        height: 455.14285
+        height: 455.1111
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1143,20 +1143,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 68789715e04b9f050800000000000000
-      internalID: 5834892765824649094
+      spriteID: d40e651de189195a0800000000000000
+      internalID: -6516259927699824563
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: qr_spritesheet 1_41
+      name: qr_spritesheet_41
       rect:
         serializedVersion: 2
         x: 2275
-        y: 910.8572
+        y: 1820.8889
         width: 455.1111
-        height: 455.14285
+        height: 455.1111
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1164,20 +1164,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d1e68ecdd6c22670800000000000000
-      internalID: 8512584901638676952
+      spriteID: ef84992080fae2ff0800000000000000
+      internalID: -58917296171038466
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: qr_spritesheet 1_42
+      name: qr_spritesheet_42
       rect:
         serializedVersion: 2
         x: 2730
-        y: 910.8572
+        y: 1820.8889
         width: 455.1111
-        height: 455.14285
+        height: 455.1111
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1185,20 +1185,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc71caf169acf4150800000000000000
-      internalID: 5859124386357581771
+      spriteID: f45f687d222bcfe00800000000000000
+      internalID: 1079933873376654671
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: qr_spritesheet 1_43
+      name: qr_spritesheet_43
       rect:
         serializedVersion: 2
         x: 3185
-        y: 910.8572
+        y: 1820.8889
         width: 455.1111
-        height: 455.14285
+        height: 455.1111
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1206,20 +1206,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb82d73843743f610800000000000000
-      internalID: 1653743779044993215
+      spriteID: 48df62432c7223970800000000000000
+      internalID: 8733086342476922244
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: qr_spritesheet 1_44
+      name: qr_spritesheet_44
       rect:
         serializedVersion: 2
         x: 3640
-        y: 910.8572
+        y: 1820.8889
         width: 455.1111
-        height: 455.14285
+        height: 455.1111
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1227,20 +1227,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 07c70c26cafbc7930800000000000000
-      internalID: 4142396504386075760
+      spriteID: 3ab9e608fbdd55870800000000000000
+      internalID: 8671080472134982563
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: qr_spritesheet 1_45
+      name: qr_spritesheet_45
       rect:
         serializedVersion: 2
         x: 0
-        y: 455.85715
+        y: 1365.8889
         width: 455.1111
-        height: 455.14285
+        height: 455.1111
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1248,20 +1248,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1ae8076fd0bc2afe0800000000000000
-      internalID: -1179156891588063583
+      spriteID: fcb513fb334945b50800000000000000
+      internalID: 6581047905467063247
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: qr_spritesheet 1_46
+      name: qr_spritesheet_46
       rect:
         serializedVersion: 2
         x: 455
-        y: 455.85715
+        y: 1365.8889
         width: 455.1111
-        height: 455.14285
+        height: 455.1111
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1269,20 +1269,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 673cf5b2064d68340800000000000000
-      internalID: 4865809956930044790
+      spriteID: ca99f3e01cef99700800000000000000
+      internalID: 547748934823418284
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: qr_spritesheet 1_47
+      name: qr_spritesheet_47
       rect:
         serializedVersion: 2
         x: 910
-        y: 455.85715
+        y: 1365.8889
         width: 455.1111
-        height: 455.14285
+        height: 455.1111
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1290,20 +1290,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e4c8ce0dc49b59e0800000000000000
-      internalID: -1631546831554427673
+      spriteID: 8e519eff06f19dc70800000000000000
+      internalID: 8996256232120063464
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: qr_spritesheet 1_48
+      name: qr_spritesheet_48
       rect:
         serializedVersion: 2
         x: 1365
-        y: 455.85715
+        y: 1365.8889
         width: 455.1111
-        height: 455.14285
+        height: 455.1111
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1311,20 +1311,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ada76e2d311e2a210800000000000000
-      internalID: 1342883114168777434
+      spriteID: 8309af195eddf2130800000000000000
+      internalID: 3544295409830236216
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: qr_spritesheet 1_49
+      name: qr_spritesheet_49
       rect:
         serializedVersion: 2
         x: 1820
-        y: 455.85715
+        y: 1365.8889
         width: 455.1111
-        height: 455.14285
+        height: 455.1111
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1332,20 +1332,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 19c5ed4d494af1d30800000000000000
-      internalID: 4404419919725091985
+      spriteID: 3ba5bd8558a65f2b0800000000000000
+      internalID: -5551413844710303053
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: qr_spritesheet 1_50
+      name: qr_spritesheet_50
       rect:
         serializedVersion: 2
         x: 2275
-        y: 455.85715
+        y: 1365.8889
         width: 455.1111
-        height: 455.14285
+        height: 455.1111
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1353,20 +1353,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 319b00444495f2750800000000000000
-      internalID: 6282338154938677523
+      spriteID: f983b01e452689100800000000000000
+      internalID: 114949907190331551
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: qr_spritesheet 1_51
+      name: qr_spritesheet_51
       rect:
         serializedVersion: 2
         x: 2730
-        y: 455.85715
+        y: 1365.8889
         width: 455.1111
-        height: 455.14285
+        height: 455.1111
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1374,20 +1374,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a86ab4a28f8370ec0800000000000000
-      internalID: -3600846738546776438
+      spriteID: a8c43626f37a9ab60800000000000000
+      internalID: 7757915723797843082
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: qr_spritesheet 1_52
+      name: qr_spritesheet_52
       rect:
         serializedVersion: 2
         x: 3185
-        y: 455.85715
+        y: 1365.8889
         width: 455.1111
-        height: 455.14285
+        height: 455.1111
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1395,20 +1395,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0a30e9045e436c9e0800000000000000
-      internalID: -1601534458247380064
+      spriteID: 9acf38c9819db7e20800000000000000
+      internalID: 3349509447608433833
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: qr_spritesheet 1_53
+      name: qr_spritesheet_53
       rect:
         serializedVersion: 2
         x: 3640
-        y: 455.85715
+        y: 1365.8889
         width: 455.1111
-        height: 455.14285
+        height: 455.1111
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1416,20 +1416,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6c55cb84bf436460800000000000000
-      internalID: 7233713063344823406
+      spriteID: 9ace329eb64bfb560800000000000000
+      internalID: 7331777093948402857
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: qr_spritesheet 1_54
+      name: qr_spritesheet_54
       rect:
         serializedVersion: 2
         x: 0
-        y: 0.8571472
+        y: 910.8889
         width: 455.1111
-        height: 455.14285
+        height: 455.1111
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1437,20 +1437,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0b3f30572aefe5100800000000000000
-      internalID: 98796215550079920
+      spriteID: f18667709e9513630800000000000000
+      internalID: 3905001209294383135
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: qr_spritesheet 1_55
+      name: qr_spritesheet_55
       rect:
         serializedVersion: 2
         x: 455
-        y: 0.8571472
+        y: 910.8889
         width: 455.1111
-        height: 455.14285
+        height: 455.1111
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1458,20 +1458,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6892385e1e965d90800000000000000
-      internalID: -7109321108591830930
+      spriteID: eec455786724ee070800000000000000
+      internalID: 8137514653549153518
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: qr_spritesheet 1_56
+      name: qr_spritesheet_56
       rect:
         serializedVersion: 2
         x: 910
-        y: 0.8571472
+        y: 910.8889
         width: 455.1111
-        height: 455.14285
+        height: 455.1111
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1479,20 +1479,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 43db22a1e7340c830800000000000000
-      internalID: 4089342670535834932
+      spriteID: 79563f9b5a1287e30800000000000000
+      internalID: 4501384823229867415
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: qr_spritesheet 1_57
+      name: qr_spritesheet_57
       rect:
         serializedVersion: 2
         x: 1365
-        y: 0.8571472
+        y: 910.8889
         width: 455.1111
-        height: 455.14285
+        height: 455.1111
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1500,8 +1500,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f16681dc02e52b4e0800000000000000
-      internalID: -1967406592234592737
+      spriteID: 68c21522a1037cfb0800000000000000
+      internalID: -4627677203296867194
       vertices: []
       indices: 
       edges: []
@@ -1509,7 +1509,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 7db9721bf814a7844984ffdf2f5f60e4
+    spriteID: 78fd8966be55d814a9f54026ccf392ec
     internalID: 0
     vertices: []
     indices: 
