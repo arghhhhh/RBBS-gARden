@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 7087315375331649011}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.001, y: 0.001, z: 0.001}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -173482714909070930, guid: 8f5f8d8be85f74341a6ce4591a33292c, type: 3}
+  - {fileID: 2100000, guid: 3e5e33f0befd4114c8940d7c159765b6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -115,4 +115,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b16e74a2ab9923b49a3846f3582cea1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spinButtonPrefab: {fileID: 6347737571005843830, guid: 8650cc12be1608045a44c4fa11226aff, type: 3}
+  refButtonPrefab: {fileID: 629722408423473709, guid: 737f2833f3752e14bb144c74b122823a, type: 3}

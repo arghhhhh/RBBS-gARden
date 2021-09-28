@@ -665,8 +665,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: Avocado Tree
-    clip: {fileID: 8300000, guid: b6aee150f5e6fc84aa4f47d47da61cc1, type: 3}
+  - name: Avocado Plant
+    clip: {fileID: 8300000, guid: 65b4cd2d314203742af2026a2a9ceb45, type: 3}
     volume: 1
     volumeVariance: 0
     pitch: 0
@@ -675,7 +675,7 @@ MonoBehaviour:
     mixerGroup: {fileID: 8128466557462131844, guid: 3752069a30329c14ebb4a8d633ed089f, type: 2}
     source: {fileID: 0}
   - name: Cherry Laurel
-    clip: {fileID: 8300000, guid: 6a208306d726c9445b4c7bfef49ae3ec, type: 3}
+    clip: {fileID: 8300000, guid: 02f2be5dfc93b6647bacdb56938fb611, type: 3}
     volume: 1
     volumeVariance: 0
     pitch: 0
@@ -684,7 +684,7 @@ MonoBehaviour:
     mixerGroup: {fileID: 8128466557462131844, guid: 3752069a30329c14ebb4a8d633ed089f, type: 2}
     source: {fileID: 0}
   - name: Coconut Palm
-    clip: {fileID: 8300000, guid: 741ead03cf5921c4ebfed88d4abeaab8, type: 3}
+    clip: {fileID: 8300000, guid: 8feb6822274283c40a95f5c3e928adff, type: 3}
     volume: 1
     volumeVariance: 0
     pitch: 0
@@ -693,7 +693,7 @@ MonoBehaviour:
     mixerGroup: {fileID: 8128466557462131844, guid: 3752069a30329c14ebb4a8d633ed089f, type: 2}
     source: {fileID: 0}
   - name: Ponytail Palm
-    clip: {fileID: 8300000, guid: 5f161a379b7415e4b8afeb6ca29affea, type: 3}
+    clip: {fileID: 8300000, guid: 31bde0f6f0d4658478ae5939f1be8c8a, type: 3}
     volume: 1
     volumeVariance: 0
     pitch: 0
@@ -848,6 +848,7 @@ MonoBehaviour:
   acceptButton: {fileID: 250698351}
   uiPopup: {fileID: 310405338}
   blurSphere: {fileID: 1704826052}
+  arTrackedImageManager: {fileID: 1314809343}
 --- !u!1 &1192458213
 GameObject:
   m_ObjectHideFlags: 0

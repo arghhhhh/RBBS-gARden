@@ -1,11 +1,18 @@
 App to do list, sorted by priority
 	__TODAY__
-	[**] Fix audio playback on iOS
-		- Was this never working? Guess not
+	[**] Fix the app building for Android on the surface tablet
 	[*] Learn to install the iOS app the normal (non-Cydia) way
 		- Seems like something that'd be important at some point	
 
 	__FUTURE__
+	[*] Disable audio lowpass
+		- Neat feature but it's pretty annoying and lerping didn't work
+			- Disable audio lowpass after figuring out lerping?? Homework
+	[*] Switch to new Unity input system
+		- Hope I find a tutorial. Need to also disable old input system
+	[*] Simplify spawn prefab structure
+		- Shouldn't need to pack my prefabs in a grandparent structure
+			- This means I need to fix the rotation in script
 	[*] Change QR graphic to raw image instead of sprite
 		- Should help the image sequence be less glitchy/higher res
 		- Need my laptop PC for this
@@ -37,3 +44,10 @@ App to do list, sorted by priority
 		- Still need to get shadows working
 	[X] Design and print description/QR cards for trees outside
 		- These need a redesign but they work for now and I'd love to save paper
+9/28
+	[X] Fix audio playback on iOS
+		- The iPhone's mute switch was on. Lol
+	[X] Changed Spin button to Play/Stop button
+		- Instead of stop, I should add a pause state, then once the audio finishes, a replay state
+	[X] Added professional British TTS audio to readback the plant description tags
+		- Everything sounds better in British, given the listener is in America
