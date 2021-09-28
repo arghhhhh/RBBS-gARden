@@ -1,13 +1,13 @@
 App to do list, sorted by priority
-	__TODAY__
-	[**] Fix the app building for Android on the surface tablet
-	[*] Learn to install the iOS app the normal (non-Cydia) way
-		- Seems like something that'd be important at some point	
+	__TODAY__	
 
 	__FUTURE__
-	[*] Disable audio lowpass
+	[***] Keep play/stop button around until audio finishes
+	[***] Disable audio lowpass
 		- Neat feature but it's pretty annoying and lerping didn't work
 			- Disable audio lowpass after figuring out lerping?? Homework
+	[**] Learn to install the iOS app the normal (non-Cydia) way
+		- Seems like something that'd be important at some point
 	[*] Switch to new Unity input system
 		- Hope I find a tutorial. Need to also disable old input system
 	[*] Simplify spawn prefab structure
@@ -51,3 +51,5 @@ App to do list, sorted by priority
 		- Instead of stop, I should add a pause state, then once the audio finishes, a replay state
 	[X] Added professional British TTS audio to readback the plant description tags
 		- Everything sounds better in British, given the listener is in America
+	[X] Fix the app building for Android on the surface tablet
+		- Testing will be quicker now, assuming everything on Android also works on iOS
