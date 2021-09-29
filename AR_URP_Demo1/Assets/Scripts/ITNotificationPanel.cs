@@ -18,7 +18,7 @@ public class ITNotificationPanel : MonoBehaviour
     public Sprite exitSprite;
     public Sprite stopSprite;
 
-    private bool hasLoaded = false;
+    private bool hasLoaded;
 
     private void Awake()
     {
@@ -79,7 +79,7 @@ public class ITNotificationPanel : MonoBehaviour
         objectReference = _newObject;
 
         objectReference.EnabledEvent += EnablePanel;
-        //objectReference.DisabledEvent += DisablePanel;
+        objectReference.DisabledEvent += DisablePanel;
     }
 
     void EnablePanel()
@@ -89,7 +89,6 @@ public class ITNotificationPanel : MonoBehaviour
             gameObject.SetActive(true);
             StartCoroutine(HideObjectAfterDelay(10f)); //Disables button after X amount of seconds
         }
-        if (!hasLoaded) hasLoaded = true;
 
         //if (audioManager.IsSoundPlaying(objectReference.name))
         //    StartCoroutine(LerpUp(2f));
@@ -97,6 +96,8 @@ public class ITNotificationPanel : MonoBehaviour
 
     void DisablePanel()
     {
+        gameObject.SetActive(true);
+        if (!hasLoaded) hasLoaded = true;
         //if (audioManager.IsSoundPlaying(objectReference.name))
         //    StartCoroutine(LerpDown(5f));
     }
