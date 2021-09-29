@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 3531372917665887954}
   - component: {fileID: 9183012459195031079}
   - component: {fileID: 3483170678652898297}
-  - component: {fileID: 7695496196160762140}
   m_Layer: 5
   m_Name: Stop Audio Button
   m_TagString: Untagged
@@ -122,24 +121,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &7695496196160762140
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 629722408423473709}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: caca8edc8cae47142809b7c4510d994d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playSprite: {fileID: 21300000, guid: 9b0df769de0b6a643a288fb4f6573152, type: 3}
-  stopSprite: {fileID: 21300000, guid: b5d38393c1df22642b9b012f6f8ceb1b, type: 3}
-  defaultMixerGroup: {fileID: 8128466557462131844, guid: 3752069a30329c14ebb4a8d633ed089f, type: 2}
-  lowpassMixerGroup: {fileID: 1975094857822919083, guid: 3752069a30329c14ebb4a8d633ed089f, type: 2}
-  lerpdownMixerGroup: {fileID: -7918002060053058292, guid: 3752069a30329c14ebb4a8d633ed089f, type: 2}
-  lerpupMixerGroup: {fileID: -4114418153675591735, guid: 3752069a30329c14ebb4a8d633ed089f, type: 2}
 --- !u!1 &3803713121738469277
 GameObject:
   m_ObjectHideFlags: 0

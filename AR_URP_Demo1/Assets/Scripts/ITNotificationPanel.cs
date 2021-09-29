@@ -12,7 +12,6 @@ public class ITNotificationPanel : MonoBehaviour
     public Button playButton;
     public Button stopButton;
     public Image playImage;
-    public Image waveImage;
     public Image exitImage;
     public Sprite playSprite;
     public Sprite pauseSprite;
