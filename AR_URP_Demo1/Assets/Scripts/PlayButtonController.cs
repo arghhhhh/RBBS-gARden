@@ -6,7 +6,7 @@ using System.Collections;
 
 public class PlayButtonController : MonoBehaviour
 {
-    private PlayButtonReferencePasser objectReference;
+    private ITReferencePasser objectReference;
     private AudioManager audioManager;
 
     [SerializeField]
@@ -29,10 +29,9 @@ public class PlayButtonController : MonoBehaviour
     }
     private void Start()
     {
-        GetComponent<Button>().onClick.AddListener(SpinButtonPress); //add a listener for button press
-
+        GetComponent<Button>().onClick.AddListener(PlayButtonPress); //add a listener for button press
     }
-    private void SpinButtonPress()
+    private void PlayButtonPress()
     {
         //the object reference here is the 3D leaf logo
         if (objectReference != null)
@@ -55,7 +54,7 @@ public class PlayButtonController : MonoBehaviour
         else return;
     }
 
-    public void GiveReference(PlayButtonReferencePasser _newObject)
+    public void GiveReference(ITReferencePasser _newObject)
     {
         objectReference = _newObject;
 
@@ -66,17 +65,16 @@ public class PlayButtonController : MonoBehaviour
     void EnableButton()
     {
         gameObject.SetActive(true);
-        //StartCoroutine(Lerper(1.0f, true));
-        //Lerper(20.0f, true);
-        audioManager.ChangeAudioMixerGroup(objectReference.name, defaultMixerGroup);
+        //if (audioManager.IsSoundPlaying(objectReference.name))
+        //    StartCoroutine(LerpUp(2f));
     }
 
     void DisableButton()
     {
+        //Create timer function that disables button after X amount of seconds
         gameObject.SetActive(false);
-        //StartCoroutine(Lerper(2.0f, false));
-        //Lerper(20.0f, false);
-        audioManager.ChangeAudioMixerGroup(objectReference.name, lowpassMixerGroup);
+        //if (audioManager.IsSoundPlaying(objectReference.name))
+        //    StartCoroutine(LerpDown(5f));
     }
 
     private void OnDestroy()
@@ -85,28 +83,31 @@ public class PlayButtonController : MonoBehaviour
         objectReference.DisabledEvent -= DisableButton;
     }
 
-    IEnumerator Lerper(float fadeTime, bool direction)
+    IEnumerator LerpDown(float fadeTime)
     {
-        if (!direction) audioManager.ChangeAudioMixerGroup(objectReference.name, lerpdownMixerGroup);
-        else audioManager.ChangeAudioMixerGroup(objectReference.name, lerpupMixerGroup);
+        audioManager.ChangeAudioMixerGroup(objectReference.name, lerpdownMixerGroup);
 
         float elapsedTime = 0;
         while (elapsedTime < fadeTime)
         {
             elapsedTime += Time.deltaTime;
-            if (!direction) //lerp down from 5000 to 537
-            {
-                lerpdownMixerGroup.audioMixer.SetFloat("LerpDownLP", Mathf.Lerp(5000f, 537f, elapsedTime / (fadeTime)));
-            }
-            else //lerp up from 537 to 5000
-            {
-                lerpupMixerGroup.audioMixer.SetFloat("LerpUpLP", Mathf.Lerp(537f, 5000f, elapsedTime / (fadeTime)));
-            }
+            lerpdownMixerGroup.audioMixer.SetFloat("LerpDownLP", Mathf.Lerp(5000f, 537f, elapsedTime / (fadeTime)));
             yield return null;
         }
-        if (!direction) audioManager.ChangeAudioMixerGroup(objectReference.name, lowpassMixerGroup);
-        else audioManager.ChangeAudioMixerGroup(objectReference.name, defaultMixerGroup);
+        audioManager.ChangeAudioMixerGroup(objectReference.name, lowpassMixerGroup);
+    }
+    IEnumerator LerpUp(float fadeTime)
+    {
+        audioManager.ChangeAudioMixerGroup(objectReference.name, lerpupMixerGroup);
 
-        yield return null;
+        float elapsedTime = 0;
+        while (elapsedTime < fadeTime)
+        {
+            elapsedTime += Time.deltaTime;
+            lerpupMixerGroup.audioMixer.SetFloat("LerpUpLP", Mathf.Lerp(537f, 5000f, elapsedTime / (fadeTime)));
+
+            yield return null;
+        }
+        audioManager.ChangeAudioMixerGroup(objectReference.name, defaultMixerGroup);
     }
 }

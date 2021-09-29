@@ -197,9 +197,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4203104253277511756, guid: e36232724816a0c43a5ed2a2cf1e1216, type: 3}
+      propertyPath: refPrefab
+      value: 
+      objectReference: {fileID: 3903244280395654794, guid: 55fe8c2bf139a4444aac31bda1e0f379, type: 3}
+    - target: {fileID: 4203104253277511756, guid: e36232724816a0c43a5ed2a2cf1e1216, type: 3}
       propertyPath: refButtonPrefab
       value: 
-      objectReference: {fileID: 629722408423473709, guid: 737f2833f3752e14bb144c74b122823a, type: 3}
+      objectReference: {fileID: 3903244280395654794, guid: 55fe8c2bf139a4444aac31bda1e0f379, type: 3}
     - target: {fileID: 7087315375331649011, guid: e36232724816a0c43a5ed2a2cf1e1216, type: 3}
       propertyPath: m_Name
       value: Ponytail Palm

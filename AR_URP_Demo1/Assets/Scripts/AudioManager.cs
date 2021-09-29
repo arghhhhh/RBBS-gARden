@@ -28,9 +28,7 @@ public class AudioManager : MonoBehaviour
         }
 
         s.source.Play();
-        #if UNITY_EDITOR
-            print("playing sound " + s.name);
-        #endif
+        //print("playing sound " + s.name);
     }
     public void PlaySoundAfterDelay(string sound, double length)
     {
@@ -44,6 +42,18 @@ public class AudioManager : MonoBehaviour
         s.source.PlayScheduled(AudioSettings.dspTime + 0.05 + length);
         //print("playing sound " + s.name);
     }
+    public void PauseSound(string sound)
+    {
+        Sound s = Array.Find(sounds, item => item.name == sound);
+        if (s == null)
+        {
+            Debug.LogWarning("Sound: " + sound + " not found!");
+            return;
+        }
+
+        s.source.Pause();
+        //print("paused sound " + s.name);
+    }
     public void StopSound(string sound)
     {
         Sound s = Array.Find(sounds, item => item.name == sound);
@@ -56,6 +66,7 @@ public class AudioManager : MonoBehaviour
         s.source.Stop();
         //print("stopped " + s.name);
     }
+   
     public bool IsSoundPlaying(string sound)
     {
         Sound s = Array.Find(sounds, item => item.name == sound);

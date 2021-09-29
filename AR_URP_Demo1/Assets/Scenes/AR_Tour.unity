@@ -671,7 +671,7 @@ MonoBehaviour:
     volumeVariance: 0
     pitch: 0
     pitchVariance: 0
-    loop: 1
+    loop: 0
     mixerGroup: {fileID: 8128466557462131844, guid: 3752069a30329c14ebb4a8d633ed089f, type: 2}
     source: {fileID: 0}
   - name: Cherry Laurel
@@ -680,7 +680,7 @@ MonoBehaviour:
     volumeVariance: 0
     pitch: 0
     pitchVariance: 0
-    loop: 1
+    loop: 0
     mixerGroup: {fileID: 8128466557462131844, guid: 3752069a30329c14ebb4a8d633ed089f, type: 2}
     source: {fileID: 0}
   - name: Coconut Palm
@@ -689,7 +689,7 @@ MonoBehaviour:
     volumeVariance: 0
     pitch: 0
     pitchVariance: 0
-    loop: 1
+    loop: 0
     mixerGroup: {fileID: 8128466557462131844, guid: 3752069a30329c14ebb4a8d633ed089f, type: 2}
     source: {fileID: 0}
   - name: Ponytail Palm
@@ -698,7 +698,7 @@ MonoBehaviour:
     volumeVariance: 0
     pitch: 0
     pitchVariance: 0
-    loop: 1
+    loop: 0
     mixerGroup: {fileID: 8128466557462131844, guid: 3752069a30329c14ebb4a8d633ed089f, type: 2}
     source: {fileID: 0}
   - name: Demo

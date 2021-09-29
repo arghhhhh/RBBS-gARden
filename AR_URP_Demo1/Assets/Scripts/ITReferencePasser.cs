@@ -1,10 +1,9 @@
 using UnityEngine;
-
-public class PlayButtonReferencePasser : MonoBehaviour
+public class ITReferencePasser : MonoBehaviour
 {
-    private PlayButtonController playButtonController;
+    private ITNotificationPanel itNotificationPanel;
     [SerializeField]
-    private GameObject refButtonPrefab;
+    private GameObject refPrefab;
 
     public delegate void RefPrefabEnabled();
     public event RefPrefabEnabled EnabledEvent;
@@ -14,13 +13,13 @@ public class PlayButtonReferencePasser : MonoBehaviour
     private void Awake()
     {
         //instantiate spin button instance and set its parent to be the Canvas
-        GameObject refButton = Instantiate(refButtonPrefab, transform.localPosition-new Vector3(0f,300f,0f), Quaternion.identity);
+        GameObject _ref = Instantiate(refPrefab, transform.localPosition-new Vector3(0f,300f,0f), Quaternion.identity);
         Canvas UI = FindObjectOfType<Canvas>(); //only one canvas object per scene
-        refButton.transform.SetParent(UI.gameObject.transform, false); //set the Canvas to be the parent of the instantiated button
+        _ref.transform.SetParent(UI.gameObject.transform, false); //set the Canvas to be the parent of the instantiated button
 
         //pass this specific prefab reference to its own spin controller
-        playButtonController = refButton.GetComponent<PlayButtonController>();
-        playButtonController.GiveReference(this); //gives the SpinController a reference to this prefab
+        itNotificationPanel = _ref.GetComponent<ITNotificationPanel>();
+        itNotificationPanel.GiveReference(this); //gives the SpinController a reference to this prefab
 
         GetComponent<Animator>().keepAnimatorControllerStateOnDisable = true; //keeps state of animator between enabling & disabling of prefab object
     }
