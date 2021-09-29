@@ -197,8 +197,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coconut Palm
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 4203104253277511756, guid: e36232724816a0c43a5ed2a2cf1e1216, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e36232724816a0c43a5ed2a2cf1e1216, type: 3}
 --- !u!1 &7741597894409049559 stripped
 GameObject:

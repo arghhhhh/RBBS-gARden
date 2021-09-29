@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-using UnityEngine.Audio;
 using System.Collections;
 
 public class ITNotificationPanel : MonoBehaviour
@@ -18,14 +17,13 @@ public class ITNotificationPanel : MonoBehaviour
     public Sprite exitSprite;
     public Sprite stopSprite;
 
-    private bool hasLoaded = false;
-
     private void Awake()
     {
         audioManager = FindObjectOfType<AudioManager>();
     }
     private void Start()
     {
+        gameObject.SetActive(false);
         playButton.onClick.AddListener(PlayButtonPress);
         stopButton.onClick.AddListener(ExitButtonPress); 
     }
@@ -63,8 +61,6 @@ public class ITNotificationPanel : MonoBehaviour
             if (!audioManager.IsSoundPlaying(objectReference.name))
             {
                 gameObject.SetActive(false);
-                StartCoroutine(Wait(3.0f));
-                Destroy(gameObject); //should remove game object X amount of seconds after pressing exit, in case image track is rescanned
             }
             else
             {
@@ -84,15 +80,15 @@ public class ITNotificationPanel : MonoBehaviour
 
     void EnablePanel()
     {
-        if (!gameObject.activeSelf && hasLoaded)
+        if (!gameObject.activeSelf) //no need to set active if it's already active
         {
             gameObject.SetActive(true);
             StartCoroutine(HideObjectAfterDelay(10f)); //Disables button after X amount of seconds
         }
-        if (!hasLoaded) hasLoaded = true;
-
-        //if (audioManager.IsSoundPlaying(objectReference.name))
-        //    StartCoroutine(LerpUp(2f));
+        {
+            //if (audioManager.IsSoundPlaying(objectReference.name))
+            //    StartCoroutine(LerpUp(2f));
+        }
     }
 
     void DisablePanel()
@@ -104,7 +100,7 @@ public class ITNotificationPanel : MonoBehaviour
     private void OnDestroy()
     {
         objectReference.EnabledEvent -= EnablePanel;
-        objectReference.DisabledEvent -= DisablePanel;
+        //objectReference.DisabledEvent -= DisablePanel;
     }
 
     IEnumerator HideObjectAfterDelay(float delay)

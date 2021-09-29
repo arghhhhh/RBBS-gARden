@@ -2,15 +2,9 @@ App to do list, sorted by priority
 	__TODAY__	
 
 	__FUTURE__
-	[***] Keep play/stop button around until audio finishes
-	[***] Disable audio lowpass
-		- Neat feature but it's pretty annoying and lerping didn't work
-			- Disable audio lowpass after figuring out lerping?? Homework
-	[**] Learn to install the iOS app the normal (non-Cydia) way
-		- Seems like something that'd be important at some point
 	[*] Switch to new Unity input system
 		- Hope I find a tutorial. Need to also disable old input system
-	[*] Simplify spawn prefab structure
+	[*] Simplify spawn prefab structure and change prefab orientation
 		- Shouldn't need to pack my prefabs in a grandparent structure
 			- This means I need to fix the rotation in script
 	[*] Change QR graphic to raw image instead of sprite
@@ -53,3 +47,9 @@ App to do list, sorted by priority
 		- Everything sounds better in British, given the listener is in America
 	[X] Fix the app building for Android on the surface tablet
 		- Testing will be quicker now, assuming everything on Android also works on iOS
+9/29
+	[X] Get app building the legit way, running on iOS 15
+		- Couldn't figure this out yet on windows, had to use Jorge's macbook
+	[X] Created persistent notification panel with plant title & redesigned play/pause, exit/stop buttons
+		- Used coroutines to disable the panel if it's not being interacted with
+	[X] Disabled lowpass audio feature

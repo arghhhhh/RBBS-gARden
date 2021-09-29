@@ -12,14 +12,16 @@ public class ITReferencePasser : MonoBehaviour
     public event RefPrefabDisabled DisabledEvent;
     private void Awake()
     {
-        //instantiate spin button instance and set its parent to be the Canvas
-        GameObject _ref = Instantiate(refPrefab, transform.localPosition-new Vector3(0f,300f,0f), Quaternion.identity);
-        Canvas UI = FindObjectOfType<Canvas>(); //only one canvas object per scene
-        _ref.transform.SetParent(UI.gameObject.transform, false); //set the Canvas to be the parent of the instantiated button
-
-        //pass this specific prefab reference to its own spin controller
-        itNotificationPanel = _ref.GetComponent<ITNotificationPanel>();
-        itNotificationPanel.GiveReference(this); //gives the SpinController a reference to this prefab
+        {
+            //OLD CODE
+            ////instantiate spin button instance and set its parent to be the Canvas
+            //GameObject _ref = Instantiate(refPrefab, transform.localPosition-new Vector3(0f,300f,0f), Quaternion.identity);
+            //Canvas UI = FindObjectOfType<Canvas>(); //only one canvas object per scene
+            //_ref.transform.SetParent(UI.gameObject.transform, false); //set the Canvas to be the parent of the instantiated button
+            ////pass this specific prefab reference to its own spin controller
+            //itNotificationPanel = _ref.GetComponent<ITNotificationPanel>();
+        }
+        FindObjectOfType<ITNotificationPanel>().GiveReference(this); //gives the IT Panel GameObject a reference to this prefab
 
         GetComponent<Animator>().keepAnimatorControllerStateOnDisable = true; //keeps state of animator between enabling & disabling of prefab object
     }
