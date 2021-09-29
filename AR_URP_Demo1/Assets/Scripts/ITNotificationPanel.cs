@@ -18,7 +18,7 @@ public class ITNotificationPanel : MonoBehaviour
     public Sprite exitSprite;
     public Sprite stopSprite;
 
-    private bool hasLoaded;
+    private bool hasLoaded = false;
 
     private void Awake()
     {
