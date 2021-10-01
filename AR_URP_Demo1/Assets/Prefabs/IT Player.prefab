@@ -124,8 +124,10 @@ MonoBehaviour:
   exitImage: {fileID: 4520612212467553617}
   playSprite: {fileID: 21300000, guid: f8b03a8f6d4a5c940af6a43ccd6bd964, type: 3}
   pauseSprite: {fileID: 21300000, guid: 07cccb1914c1e7b4382605db46ab3474, type: 3}
+  replaySprite: {fileID: 21300000, guid: 40a63a589de506d4a8a93550dc8b001a, type: 3}
   exitSprite: {fileID: 21300000, guid: d092f6ee59cc4e3498cc7b902860a87f, type: 3}
   stopSprite: {fileID: 21300000, guid: 434c0e46daf6dd5458a8bdf0eca97eb1, type: 3}
+  plantText: {fileID: 6239415779554008014}
 --- !u!1 &5205209679158970970
 GameObject:
   m_ObjectHideFlags: 0
@@ -138,7 +140,7 @@ GameObject:
   - component: {fileID: 2096153997752938966}
   - component: {fileID: 6239415779554008014}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Plant name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -312,7 +314,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3803713121738469277, guid: 95fff74e8c1d73c41816bc44b2d9fb50, type: 3}
       propertyPath: m_Name
-      value: Stop Button
+      value: Stop Button Image
       objectReference: {fileID: 0}
     - target: {fileID: 9183012459195031079, guid: 95fff74e8c1d73c41816bc44b2d9fb50, type: 3}
       propertyPath: m_Color.a
@@ -453,7 +455,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3803713121738469277, guid: 737f2833f3752e14bb144c74b122823a, type: 3}
       propertyPath: m_Name
-      value: Play Button
+      value: Play Button Image
       objectReference: {fileID: 0}
     - target: {fileID: 9183012459195031079, guid: 737f2833f3752e14bb144c74b122823a, type: 3}
       propertyPath: m_Color.a

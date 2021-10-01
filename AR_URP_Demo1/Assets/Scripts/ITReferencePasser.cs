@@ -1,33 +1,27 @@
 using UnityEngine;
 public class ITReferencePasser : MonoBehaviour
 {
-    private ITNotificationPanel itNotificationPanel;
-    [SerializeField]
-    private GameObject refPrefab;
-
     public delegate void RefPrefabEnabled();
     public event RefPrefabEnabled EnabledEvent;
 
     public delegate void RefPrefabDisabled();
     public event RefPrefabDisabled DisabledEvent;
+
+    [SerializeField]
+    private string refName;
+
+    private ITNotificationPanel itNotifPanel; 
+
     private void Awake()
     {
-        {
-            //OLD CODE
-            ////instantiate spin button instance and set its parent to be the Canvas
-            //GameObject _ref = Instantiate(refPrefab, transform.localPosition-new Vector3(0f,300f,0f), Quaternion.identity);
-            //Canvas UI = FindObjectOfType<Canvas>(); //only one canvas object per scene
-            //_ref.transform.SetParent(UI.gameObject.transform, false); //set the Canvas to be the parent of the instantiated button
-            ////pass this specific prefab reference to its own spin controller
-            //itNotificationPanel = _ref.GetComponent<ITNotificationPanel>();
-        }
-        FindObjectOfType<ITNotificationPanel>().GiveReference(this); //gives the IT Panel GameObject a reference to this prefab
+        itNotifPanel = FindObjectOfType<ITNotificationPanel>();
 
         GetComponent<Animator>().keepAnimatorControllerStateOnDisable = true; //keeps state of animator between enabling & disabling of prefab object
     }
 
     private void OnEnable()
     {
+        itNotifPanel.GiveReference(this);
         if (EnabledEvent != null)
         {
             EnabledEvent();
@@ -41,4 +35,6 @@ public class ITReferencePasser : MonoBehaviour
             DisabledEvent();
         }
     }
+
+    public string ReferenceName() => refName;
 }

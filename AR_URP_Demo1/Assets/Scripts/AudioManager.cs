@@ -66,7 +66,6 @@ public class AudioManager : MonoBehaviour
         s.source.Stop();
         //print("stopped " + s.name);
     }
-   
     public bool IsSoundPlaying(string sound)
     {
         Sound s = Array.Find(sounds, item => item.name == sound);
@@ -96,7 +95,18 @@ public class AudioManager : MonoBehaviour
         }
         s.source.outputAudioMixerGroup = mixerGroup;
     }
+    public float TimeUntilAudioFinished(string sound)
+    {
+        Sound s = Array.Find(sounds, item => item.name == sound);
+        if (s == null)
+        {
+            Debug.LogWarning("Sound: " + sound + " not found!");
+            return 0;
+        }
+        float time = s.source.clip.length - s.source.time;
 
+        return time;
+    }
     IEnumerator FadeAudio(float fadeTime)
     {
         float elapsedTime = 0;

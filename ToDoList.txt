@@ -1,6 +1,8 @@
 App to do list, sorted by priority
 	__TODAY__	
-
+	[**] Add button to return to main menu
+		- Every scene should have this so it should be a prefab
+	
 	__FUTURE__
 	[*] Switch to new Unity input system
 		- Hope I find a tutorial. Need to also disable old input system
@@ -53,3 +55,10 @@ App to do list, sorted by priority
 	[X] Created persistent notification panel with plant title & redesigned play/pause, exit/stop buttons
 		- Used coroutines to disable the panel if it's not being interacted with
 	[X] Disabled lowpass audio feature
+		- Got the lerping to semi-work right before tho
+9/30
+	[X] Added working back button to AR tour and debug scenes
+		- It even stores history so it can go back multiple scenes in a row
+	[X] Redid ImageTrackerManager (named ImageTrackerManager2) to spawn prefabs facing the camera at a constant distance
+		- Distance can be controlled by a serializable float, would be nice (for testing) if there was a slider control
+	

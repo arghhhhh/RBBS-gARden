@@ -1,8 +1,9 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using Joss.SceneManagement;
 
-public class UIManager : MonoBehaviour
+public class DebugUIManager : MonoBehaviour
 {
     [SerializeField]
     private Button gpsButton;
@@ -17,6 +18,8 @@ public class UIManager : MonoBehaviour
     {
         gpsButton.onClick.AddListener(GpsButtonPress);
         inspectButton.onClick.AddListener(InspectButtonPress);
+
+        SceneLauncher.StoreSceneHistory();
     }
 
     void GpsButtonPress()

@@ -1,10 +1,7 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
+using Joss.SceneManagement;
 
 public class MainMenuController : MonoBehaviour
 {
@@ -17,36 +14,33 @@ public class MainMenuController : MonoBehaviour
     [SerializeField]
     private Button debugButton;
 
-    private void Awake()
+    void Awake()
     {
         infoButton.onClick.AddListener(LoadInfo);
         arButton.onClick.AddListener(LoadAR);
         mapButton.onClick.AddListener(LoadMap);
         debugButton.onClick.AddListener(LoadDebug);
-    }
 
-    void SceneLauncher(int scene)
-    {
-        SceneManager.LoadScene(scene);
+        SceneLauncher.StoreSceneHistory();
     }
 
     void LoadInfo() 
     {
-        SceneLauncher(1);
+        SceneLauncher.GoToScene(1);
     }
 
     void LoadAR()
     {
-        SceneLauncher(1);
+        SceneLauncher.GoToScene(1);
     }
 
     void LoadMap()
     {
-        SceneLauncher(1);
+        SceneLauncher.GoToScene(1);
     }
 
     void LoadDebug()
     {
-        SceneLauncher(2);
+        SceneLauncher.GoToScene(2);
     }
 }

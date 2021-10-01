@@ -4,10 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
-using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(ARTrackedImageManager))]
-public class ImageTrackerManager : MonoBehaviour
+public class ImageTrackerManager2 : MonoBehaviour
 {
     [Header("The length of this list must match the number of images in Reference Image Library")]
     [SerializeField]
@@ -23,6 +22,12 @@ public class ImageTrackerManager : MonoBehaviour
     //text used for debugging
     //public Text debugText;
     //public Text debugTextValue;
+
+    public delegate void ImageTracked();
+    public event ImageTracked ImageTrackedEvent;
+    public delegate void ImageLost();
+    public event ImageTracked ImageLostEvent;
+    public static bool tracked;
 
     void Awake()
     {
@@ -84,20 +89,37 @@ public class ImageTrackerManager : MonoBehaviour
         {
             //set the image tracked ar object to active 
             allObjects[trackedImage.referenceImage.name].SetActive(true);
-            allObjects[trackedImage.referenceImage.name].transform.position = trackedImage.transform.position;
-            allObjects[trackedImage.referenceImage.name].transform.rotation = trackedImage.transform.rotation;
-            allObjects[trackedImage.referenceImage.name].transform.Rotate(90, 0, 0); //rotate image prefab to correct orientation
+
+            if (!tracked)
+            {
+                if (ImageTrackedEvent != null) //Fires only when an image is newly tracked
+                {
+                    ImageTrackedEvent();
+                }
+                tracked = true;
+            }
         }
-        else //if tracked image tracking state is limited or none 
+
+        else
         {
-            //deactivate the image tracked ar object 
-            allObjects[trackedImage.referenceImage.name].SetActive(false);
+            if (tracked)
+            {
+                if (ImageLostEvent != null) //Fires only when tracking is newly lost
+                {
+                    ImageLostEvent();
+                }
+                tracked = false;
+            }
         }
-        //if (debugText || debugTextValue) //check if debug text has been assigned in inspector
-        //{
-        //    debugText.text = allObjects[trackedImage.referenceImage.name].name;
-        //    debugTextValue.text = "Tracking state: " + trackedImage.trackingState.ToString();
-        //}
+
+        //DEBUG
+        {
+            //if (debugText || debugTextValue) //check if debug text has been assigned in inspector
+            //{
+            //    debugText.text = allObjects[trackedImage.referenceImage.name].name;
+            //    debugTextValue.text = "Tracking state: " + trackedImage.trackingState.ToString();
+            //}
+        }
     }
 
     public void OnImageChanged(ARTrackedImagesChangedEventArgs args)

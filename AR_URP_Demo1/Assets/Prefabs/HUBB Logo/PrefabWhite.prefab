@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b16e74a2ab9923b49a3846f3582cea1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  refPrefab: {fileID: 3903244280395654794, guid: 55fe8c2bf139a4444aac31bda1e0f379, type: 3}
+  refName: Avocado Plant
 --- !u!1 &7778739827935612993
 GameObject:
   m_ObjectHideFlags: 0

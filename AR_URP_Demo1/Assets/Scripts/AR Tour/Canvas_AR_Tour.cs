@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
+using Joss.SceneManagement;
 
 public class Canvas_AR_Tour : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class Canvas_AR_Tour : MonoBehaviour
     {
         acceptButton.onClick.AddListener(AcceptButtonPress);
         arTrackedImageManager.enabled = false;
+        SceneLauncher.StoreSceneHistory();
     }
 
     void AcceptButtonPress()
