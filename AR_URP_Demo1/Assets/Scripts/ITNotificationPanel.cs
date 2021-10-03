@@ -28,7 +28,8 @@ public class ITNotificationPanel : MonoBehaviour
     [SerializeField]
     private float upDistance;
 
-    private bool demoBool;
+    private bool showingPlay;
+    private bool showingExit;
 
     private ImageTrackerManager2 imageTrackerManager;
 
@@ -60,9 +61,9 @@ public class ITNotificationPanel : MonoBehaviour
         //the object reference here is the prefab generated from the tracked image
         if (objectReference != null)
         {
-            bool animatorState = objectReference.GetComponent<Animator>().GetBool("isSpinning");
+            bool animatorState = objectReference.GetComponent<Animator>().GetBool("isSpinning"); //move this check bool to the enable panel event
             //if (!animatorState)
-            if (!demoBool)
+            if (!showingPlay)
             {
                 objectReference.GetComponent<Animator>().SetBool("isSpinning", true);
                 playImage.sprite = pauseSprite;
@@ -71,13 +72,12 @@ public class ITNotificationPanel : MonoBehaviour
             }
             else
             {
-                objectReference.GetComponent<Animator>().SetBool("isSpinning", true); //set to false when I fix the idle
+                objectReference.GetComponent<Animator>().SetBool("isSpinning", false);
                 playImage.sprite = playSprite;
                 exitImage.sprite = exitSprite;
                 audioManager.PauseSound(objectReferenceName);
-                EventSystem.current.SetSelectedGameObject(null); //disables button selected color
             }
-            demoBool = !demoBool;
+            showingPlay = !showingPlay;
         }
         else return;
     }
@@ -87,14 +87,14 @@ public class ITNotificationPanel : MonoBehaviour
         //the object reference here is the prefab generated from the tracked image
         if (objectReference != null)
         {
-            if (!demoBool) //if exit button is visible
+            if (!showingPlay) //if exit button is visible
             {
                 StartCoroutine(HideObjectAfterDelay(0.01f));
             }
             else //if stop button is visible
             {
-                objectReference.GetComponent<Animator>().SetBool("isSpinning", true); //set to false when I fix the idle
-                demoBool = false;
+                objectReference.GetComponent<Animator>().SetBool("isSpinning", false);
+                showingPlay = false;
                 playImage.sprite = replaySprite;
                 exitImage.sprite = exitSprite;
                 audioManager.StopSound(objectReferenceName);
@@ -155,7 +155,7 @@ public class ITNotificationPanel : MonoBehaviour
 
     void DisableButton()
     {
-        if (updateObj && !demoBool)
+        if (updateObj && !showingPlay)
         {
             exitButton.interactable = false;
             exitImage.color = Color.grey;
