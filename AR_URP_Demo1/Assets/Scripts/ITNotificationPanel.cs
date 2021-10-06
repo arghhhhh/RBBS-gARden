@@ -9,6 +9,7 @@ public class ITNotificationPanel : MonoBehaviour
 {
     private ITReferencePasser objectReference;
     private string objectReferenceName;
+    private string objectReferenceNameOld;
     private AudioManager audioManager;
 
     public Button playButton;
@@ -109,6 +110,9 @@ public class ITNotificationPanel : MonoBehaviour
         objectReferenceName = objectReference.ReferenceName();
 
         objectReference.EnabledEvent += EnablePanel;
+
+        objectReferenceNameOld = objectReferenceName;
+        //this can store old reference name and check to see if its a new object
     }
 
     void EnablePanel()
