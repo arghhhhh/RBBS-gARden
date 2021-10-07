@@ -1,16 +1,13 @@
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using System.Collections;
-using UnityEngine.XR.ARFoundation;
-using UnityEngine.XR.ARSubsystems;
+using System.Collections.Generic;
 
 public class ITNotificationPanel : MonoBehaviour
 {
-    private ITReferencePasser objectReference;
-    private string objectReferenceName;
-    private string objectReferenceNameOld;
     private AudioManager audioManager;
+
+    public GameObject shield;
 
     public Button playButton;
     public Button exitButton;
@@ -21,157 +18,113 @@ public class ITNotificationPanel : MonoBehaviour
     public Sprite replaySprite;
     public Sprite exitSprite;
     public Sprite stopSprite;
-    public Text plantText;
+    public Text objectTitle;
 
-    private bool updateObj;
-    [SerializeField]
-    private float forwardDistance;
-    [SerializeField]
-    private float upDistance;
+    private bool isPlaying;
+    private bool canExit;
 
-    private bool showingPlay;
-    private bool showingExit;
-
-    private ImageTrackerManager2 imageTrackerManager;
+    private ImageTrackerManager imageTrackerManager;
+    private string currRef;
+    private string prevRef;
 
     void Awake()
     {
         audioManager = FindObjectOfType<AudioManager>();
-        imageTrackerManager = FindObjectOfType<ImageTrackerManager2>();
+        imageTrackerManager = FindObjectOfType<ImageTrackerManager>();
     }
+
     void Start()
     {
-        gameObject.SetActive(false);
+        shield.SetActive(false);
         playButton.onClick.AddListener(PlayButtonPress);
         exitButton.onClick.AddListener(ExitButtonPress);
 
-        imageTrackerManager.ImageTrackedEvent += DisableButton;
-        imageTrackerManager.ImageLostEvent += EnableButton;
+        imageTrackerManager.ImageTrackedEvent += ShieldManager;
+        imageTrackerManager.ImageLostEvent += ShieldManager;
     }
-    void FixedUpdate()
+
+    void Update()
     {
-        if (updateObj)
-        {   //Since the object always needs to face the camera, its position/rotation properties don't need to be attached to a specific tracking state
-            objectReference.transform.position = Camera.main.transform.position + Camera.main.transform.forward * forwardDistance + Camera.main.transform.up * upDistance;
-            objectReference.transform.rotation = new Quaternion(0.0f, Camera.main.transform.rotation.y, 0.0f, Camera.main.transform.rotation.w); //rotation doesn't need to be set
+        
+    }
+
+    void OnDestroy()
+    {
+        imageTrackerManager.ImageTrackedEvent -= ShieldManager;
+        imageTrackerManager.ImageLostEvent -= ShieldManager;
+    }
+
+    void ShieldManager()
+    {
+        if (!shield.activeSelf) //if panel is not already active
+        {
+            currRef = imageTrackerManager.currentRef;
+
+            if (currRef != null) //image is being tracked
+            {
+                ReferenceSetter(); //set panel title and reset button state
+                shield.SetActive(true); //show panel
+
+                //prevRef = currRef;
+            }
         }
     }
-    private void PlayButtonPress()
+
+    void ReferenceSetter()
     {
-        StopAllCoroutines();
-        //the object reference here is the prefab generated from the tracked image
-        if (objectReference != null)
-        {
-            bool animatorState = objectReference.GetComponent<Animator>().GetBool("isSpinning"); //move this check bool to the enable panel event
-            //if (!animatorState)
-            if (!showingPlay)
-            {
-                objectReference.GetComponent<Animator>().SetBool("isSpinning", true);
-                playImage.sprite = pauseSprite;
-                exitImage.sprite = stopSprite;
-                audioManager.PlaySound(objectReferenceName);
-            }
-            else
-            {
-                objectReference.GetComponent<Animator>().SetBool("isSpinning", false);
-                playImage.sprite = playSprite;
-                exitImage.sprite = exitSprite;
-                audioManager.PauseSound(objectReferenceName);
-            }
-            showingPlay = !showingPlay;
-        }
-        else return;
+        objectTitle.text = currRef;
+        playImage.sprite = playSprite;
+        exitImage.sprite = exitSprite;
+        isPlaying = false;
+        canExit = true;
     }
 
-    private void ExitButtonPress()
+    void PlayButtonPress() //triggered whenever the play button is pressed
     {
-        //the object reference here is the prefab generated from the tracked image
-        if (objectReference != null)
+        if (isPlaying) //showing the pause button -- will change from playing state to paused state
         {
-            if (!showingPlay) //if exit button is visible
-            {
-                StartCoroutine(HideObjectAfterDelay(0.01f));
-            }
-            else //if stop button is visible
-            {
-                objectReference.GetComponent<Animator>().SetBool("isSpinning", false);
-                showingPlay = false;
-                playImage.sprite = replaySprite;
-                exitImage.sprite = exitSprite;
-                audioManager.StopSound(objectReferenceName);
-            }
-        }
-        else return;
-    }
-
-    public void GiveReference(ITReferencePasser _newObject)
-    {
-        objectReference = _newObject;
-        objectReferenceName = objectReference.ReferenceName();
-
-        objectReference.EnabledEvent += EnablePanel;
-
-        objectReferenceNameOld = objectReferenceName;
-        //this can store old reference name and check to see if its a new object
-    }
-
-    void EnablePanel()
-    {
-        if (!gameObject.activeSelf) //no need to set active if it's already active
-        {
-            //audioManager.PlaySound("Notification");
             playImage.sprite = playSprite;
             exitImage.sprite = exitSprite;
-            exitButton.interactable = true;
-            if (objectReference != null)
-                plantText.text = objectReferenceName;
-            gameObject.SetActive(true);
-            updateObj = true;
-            StartCoroutine(HideObjectAfterDelay(10f)); //Disables button after X amount of seconds
+            audioManager.PauseSound(currRef);
         }
+
+        else //showing the default play button -- will change from paused state to playing state
         {
-            //if (audioManager.IsSoundPlaying(objectReference.name))
-            //    StartCoroutine(LerpUp(2f));
+            playImage.sprite = pauseSprite;
+            exitImage.sprite = stopSprite;
+            audioManager.PlaySound(currRef);
         }
+
+        isPlaying = !isPlaying; //flip state of the play checker bool
+        canExit = !canExit; //flip state of the exit checker bool -- this is because the exit button state is directly tied to the play button state
     }
 
-    void DisablePanel()
+    void ExitButtonPress()
     {
-        //if (audioManager.IsSoundPlaying(objectReference.name))
-        //    StartCoroutine(LerpDown(5f));
-    }
-
-    private void OnDestroy()
-    {
-        objectReference.EnabledEvent -= EnablePanel;
-        imageTrackerManager.ImageTrackedEvent -= DisableButton;
-        imageTrackerManager.ImageLostEvent -= EnableButton;
-    }
-
-    void EnableButton()
-    {
-        if (updateObj)
+        if (canExit) //showing the exit button
         {
-            exitButton.interactable = true;
-            exitImage.color = Color.white;
+            shield.SetActive(false); //hide panel
+            //have ImageTrackerManager check for a new reference on exit
         }
-    }
 
-    void DisableButton()
-    {
-        if (updateObj && !showingPlay)
+        else //showing the stop audio button
         {
-            exitButton.interactable = false;
-            exitImage.color = Color.grey;
+            playImage.sprite = replaySprite;
+            exitImage.sprite = exitSprite;
+            audioManager.StopSound(currRef);
+            isPlaying = false;
         }
+
+        canExit = !canExit; //flip state of the exit checker bool
     }
 
-    IEnumerator HideObjectAfterDelay(float delay)
+    void TrackingImage()
     {
-        yield return new WaitForSeconds(delay);
-        gameObject.SetActive(false);
-        updateObj = false;
-        objectReference.gameObject.SetActive(false);
-        plantText.text = "";
+
+    }
+
+    void TrackingLost()
+    {
+
     }
 }

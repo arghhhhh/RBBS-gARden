@@ -23,7 +23,7 @@ MonoBehaviour:
       m_GuidHigh: 3647322110936348698
     m_Size: {x: 0.2, y: 0.2}
     m_SpecifySize: 1
-    m_Name: pwhite
+    m_Name: Ponytail Palm
     m_Texture: {fileID: 0}
   - m_SerializedGuid:
       m_GuidLow: 5102499461711780473
@@ -33,7 +33,7 @@ MonoBehaviour:
       m_GuidHigh: 15105220900924281467
     m_Size: {x: 0.2, y: 0.2}
     m_SpecifySize: 1
-    m_Name: pblue
+    m_Name: Avocado Plant
     m_Texture: {fileID: 0}
   - m_SerializedGuid:
       m_GuidLow: 5619179060453484078
@@ -43,7 +43,7 @@ MonoBehaviour:
       m_GuidHigh: 5309586934040707273
     m_Size: {x: 0.2, y: 0.2}
     m_SpecifySize: 1
-    m_Name: pred
+    m_Name: Coconut Palm
     m_Texture: {fileID: 0}
   - m_SerializedGuid:
       m_GuidLow: 5587947493724369700
@@ -53,5 +53,5 @@ MonoBehaviour:
       m_GuidHigh: 5680712591685446697
     m_Size: {x: 0.2, y: 0.2}
     m_SpecifySize: 1
-    m_Name: pgreen
+    m_Name: Cherry Laurel
     m_Texture: {fileID: 0}

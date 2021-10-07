@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
-using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(ARTrackedImageManager))]
 public class ImageTrackerManager : MonoBehaviour
@@ -14,15 +13,23 @@ public class ImageTrackerManager : MonoBehaviour
     private List<GameObject> ObjectsToPlace;
 
     private int refImageCount;
-    private Dictionary<string, GameObject> allObjects;
+    public Dictionary<string, GameObject> allObjects;
 
     //create the “trackable” manager to detect 2D images
     private ARTrackedImageManager arTrackedImageManager;
     private IReferenceImageLibrary refLibrary;
 
     //text used for debugging
-    //public Text debugText;
-    //public Text debugTextValue;
+    public Text debugText;
+    public Text debugTextValue;
+
+    public delegate void ImageTracked();
+    public event ImageTracked ImageTrackedEvent;
+    public delegate void ImageLost();
+    public event ImageTracked ImageLostEvent;
+    public static bool tracked;
+
+    public string currentRef { get; private set; }
 
     void Awake()
     {
@@ -74,7 +81,15 @@ public class ImageTrackerManager : MonoBehaviour
     void ActivateTrackedObject(string imageName)
     {
         Debug.Log("Tracked the target: " + imageName);
-        allObjects[imageName].SetActive(true);
+        //allObjects[imageName].SetActive(true); //need to disable this as well to prevent prefabs from loading smh
+
+        //DEBUG
+        {
+            //if (debugText || debugTextValue) //check if debug text has been assigned in inspector
+            //{
+            //debugText.text = imageName;
+            //}
+        }
     }
 
     public void UpdateTrackedObject(ARTrackedImage trackedImage)
@@ -82,21 +97,40 @@ public class ImageTrackerManager : MonoBehaviour
         //if tracked image tracking state is comparable to tracking
         if (trackedImage.trackingState == TrackingState.Tracking)
         {
-            //set the image tracked ar object to active 
-            allObjects[trackedImage.referenceImage.name].SetActive(true);
-            allObjects[trackedImage.referenceImage.name].transform.position = trackedImage.transform.position;
-            allObjects[trackedImage.referenceImage.name].transform.rotation = trackedImage.transform.rotation;
-            allObjects[trackedImage.referenceImage.name].transform.Rotate(90, 0, 0); //rotate image prefab to correct orientation
+            if (!tracked)
+            {
+                //allObjects[trackedImage.referenceImage.name].SetActive(true); //set ar prefab object to active -- will eventually depricate this feature
+                currentRef = trackedImage.referenceImage.name; //this reference will tell the IT Panel which object has most recently been tracked
+
+                if (ImageTrackedEvent != null) //Fires only when an image is newly tracked
+                {
+                    ImageTrackedEvent();
+                }
+                tracked = true;
+            }
         }
-        else //if tracked image tracking state is limited or none 
+
+        else //tracking state is limited or none
         {
-            //deactivate the image tracked ar object 
-            allObjects[trackedImage.referenceImage.name].SetActive(false);
+            if (tracked)
+            {
+                currentRef = null;
+
+                if (ImageLostEvent != null) //Fires only when tracking is newly lost
+                {
+                    ImageLostEvent();
+                }
+                tracked = false;
+            }
         }
+
+        //DEBUG
+        //{
         //if (debugText || debugTextValue) //check if debug text has been assigned in inspector
         //{
-        //    debugText.text = allObjects[trackedImage.referenceImage.name].name;
+        //    debugText.text = trackedImage.referenceImage.name;
         //    debugTextValue.text = "Tracking state: " + trackedImage.trackingState.ToString();
+        //}
         //}
     }
 

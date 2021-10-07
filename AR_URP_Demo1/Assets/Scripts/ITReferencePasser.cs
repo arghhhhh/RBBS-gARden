@@ -10,11 +10,11 @@ public class ITReferencePasser : MonoBehaviour
     [SerializeField]
     private string refName;
 
-    private ITNotificationPanel itNotifPanel; 
+    private ITNotificationPanelOld itNotifPanel; 
 
-    private void Awake()
+    private void Start()
     {
-        itNotifPanel = FindObjectOfType<ITNotificationPanel>();
+        itNotifPanel = FindObjectOfType<ITNotificationPanelOld>();
 
         GetComponent<Animator>().keepAnimatorControllerStateOnDisable = true; //keeps state of animator between enabling & disabling of prefab object
     }

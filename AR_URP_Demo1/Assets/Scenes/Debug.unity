@@ -2834,6 +2834,8 @@ MonoBehaviour:
   - {fileID: 7087315375331649011, guid: 671f7fd1b9383b341bfb7b6e52777c37, type: 3}
   - {fileID: 7087315375331649011, guid: 408ac349a91659948987d170a7f6fa00, type: 3}
   - {fileID: 7087315375331649011, guid: 6c4519c230d468f4fb079fe97a84ef8a, type: 3}
+  debugText: {fileID: 1960378261}
+  debugTextValue: {fileID: 828566283}
 --- !u!114 &1314809343
 MonoBehaviour:
   m_ObjectHideFlags: 0
