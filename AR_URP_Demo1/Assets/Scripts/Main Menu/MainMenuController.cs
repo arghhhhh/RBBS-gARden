@@ -14,6 +14,8 @@ public class MainMenuController : MonoBehaviour
     [SerializeField]
     private Button debugButton;
 
+    public static DebugUIManager debugger;
+
     void Awake()
     {
         infoButton.onClick.AddListener(LoadInfo);

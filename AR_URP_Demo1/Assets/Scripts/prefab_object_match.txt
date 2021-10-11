@@ -1,0 +1,4 @@
+Coconut Palm,LogoBlue
+Cherry Laurel,LogoGreen
+Ponytail Palm,LogoRed
+Avocado Plant,LogoWhite

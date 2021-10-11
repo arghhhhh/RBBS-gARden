@@ -1,24 +1,38 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.XR.ARFoundation;
 using Joss.SceneManagement;
 
 public class DebugUIManager : MonoBehaviour
 {
-    [SerializeField]
-    private Button gpsButton;
-    [SerializeField]
-    private Button inspectButton;
-    [SerializeField]
-    private GameObject gpsText;
-    [SerializeField]
-    private GameObject inspectParent;
+    public Button gpsButton;
+    public Button inspectButton;
+    public Button blurButton;
+    public Button cameraButton;
+    public GameObject gpsText;
+    public GameObject inspector;
+    public GameObject blurSphere;
+    public ARSession arSession;
 
+    public bool debug;
+    public GameObject debugger;
+    public Text debug1;
+    public Text debug2;
+    public Text debug3;
+    public Text debug4;
+
+    void Awake()
+    {
+        gpsText.SetActive(false);
+        inspector.SetActive(false);
+    }
     void Start()
     {
         gpsButton.onClick.AddListener(GpsButtonPress);
         inspectButton.onClick.AddListener(InspectButtonPress);
-
+        blurButton.onClick.AddListener(BlurButtonPress);
+        cameraButton.onClick.AddListener(CameraButtonPress);
         SceneLauncher.StoreSceneHistory();
     }
 
@@ -37,13 +51,40 @@ public class DebugUIManager : MonoBehaviour
 
     void InspectButtonPress()
     {
-        if (!inspectParent.activeSelf)
+        if (!inspector.activeSelf)
         {
-            inspectParent.SetActive(true);
+            inspector.SetActive(true);
         }
         else
         {
-            inspectParent.SetActive(false);
+            inspector.SetActive(false);
+            EventSystem.current.SetSelectedGameObject(null); //disables button selected color
+        }
+    }
+
+    void BlurButtonPress()
+    {
+        if (!blurSphere.activeSelf)
+        {
+            blurSphere.SetActive(true);
+        }
+        else
+        {
+            blurSphere.SetActive(false);
+            EventSystem.current.SetSelectedGameObject(null); //disables button selected color
+        }
+    }
+
+    void CameraButtonPress()
+    {
+        if (arSession.enabled)
+        {
+            arSession.enabled = false;
+            blurButton.interactable = false;
+        }
+        else
+        {
+            arSession.enabled = true;
             EventSystem.current.SetSelectedGameObject(null); //disables button selected color
         }
     }

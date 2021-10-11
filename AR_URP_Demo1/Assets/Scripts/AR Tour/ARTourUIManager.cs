@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
 using Joss.SceneManagement;
 
-public class Canvas_AR_Tour : MonoBehaviour
+public class ARTourUIManager : MonoBehaviour
 {
     [SerializeField]
     private Button acceptButton;
@@ -15,6 +15,8 @@ public class Canvas_AR_Tour : MonoBehaviour
     private GameObject blurSphere;
     [SerializeField]
     private ARTrackedImageManager arTrackedImageManager;
+
+    
     void Start()
     {
         acceptButton.onClick.AddListener(AcceptButtonPress);

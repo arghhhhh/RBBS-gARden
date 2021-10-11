@@ -1,6 +1,9 @@
 App to do list, sorted by priority
 	__TODAY__	
-	[**] Redesign IT Panel flow between tracked states and different targets
+	[**] Create full screen player panel with animated prefab
+	[*] Make debug scene and ar tour scene the same scene
+		- Need a static bool attached to level manager object with a dontdestroyonload behavior
+	[*] Get tracker reference to rescan on panel exit
 	
 	__FUTURE__
 	[*] Switch to new Unity input system
@@ -63,9 +66,17 @@ App to do list, sorted by priority
 10/7
 	[X] Planned out scanning target flow
 		- Tracked targets will spawn cards with info and expansion options
-10/8
+10/7
 	[X] Installed AltStore and Unc0ver with Apple developer license
 		- Now I won't have to reinstall them every week
 	[X] Completely rebuilt the IT Panel Manager to correctly flow between different tracking targets and tracking states
 		- This was an under-the-hood fix and will prepare me for the next steps in the IT Panel navigation
+
+10/11
+	[X] Created full screen player panel
+		- Renamed IT Player to Mini Player for consistency
+	[X] Redid debugging scene
+		- Now it's the exact same as the AR tour scene, with added debugging features
+	[X] Demoed the app to Jose Matto and John Mills
+		- Discussed future AR features such as animated players
 	

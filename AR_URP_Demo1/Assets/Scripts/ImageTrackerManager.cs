@@ -58,7 +58,7 @@ public class ImageTrackerManager : MonoBehaviour
     {
         refLibrary = arTrackedImageManager.referenceLibrary;
         refImageCount = refLibrary.count;
-        LoadObjectDictionary();
+        //LoadObjectDictionary();
     }
 
     void LoadObjectDictionary()

@@ -27,7 +27,7 @@ public class SpriteAnim : MonoBehaviour
 
     private void LoadSpriteSheet()
     {
-        sprites = Resources.LoadAll<Sprite>("qr_spritesheet");
+        sprites = Resources.LoadAll<Sprite>("UI Elements/qr_spritesheet");
         if (sprites != null && sprites.Length > 0)
         {
             timePerFrame = 1f / frameRate * speed;

@@ -11,9 +11,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AR_Tour.unity
     guid: b577b953eb6e5cc48b9e9ff9f1058990
+  - enabled: 0
+    path: Assets/Scenes/Debug2.unity
+    guid: 7ae0405db91eafd4e909e166a5bf6687
   - enabled: 1
     path: Assets/Scenes/Debug.unity
-    guid: 7ae0405db91eafd4e909e166a5bf6687
+    guid: db29e7b25627fd5489eb994692bf7e33
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: acb4de0e8d22c20408571be5258ea1cd, type: 2}
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: bf4d0ea20d1188e42b54f30829e11dde, type: 2}

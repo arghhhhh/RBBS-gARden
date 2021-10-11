@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 
-public class ITNotificationPanelOld : MonoBehaviour
+public class ITNotificationPanel : MonoBehaviour
 {
     private ITReferencePasser objectReference;
     private string objectReferenceName;

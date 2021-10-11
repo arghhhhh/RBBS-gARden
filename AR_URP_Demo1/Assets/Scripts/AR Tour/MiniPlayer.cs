@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
-public class ITNotificationPanel : MonoBehaviour
+public class MiniPlayer : MonoBehaviour
 {
     private AudioManager audioManager;
 
@@ -24,8 +24,12 @@ public class ITNotificationPanel : MonoBehaviour
     private bool canExit;
 
     private ImageTrackerManager imageTrackerManager;
-    private string currRef;
-    private string prevRef;
+    public string CurrRef { get; private set; }
+
+    public Button expandButton;
+    public GameObject fullPlayer;
+    public delegate void PlayerExpanded();
+    public event PlayerExpanded PlayerExpandEvent;
 
     void Awake()
     {
@@ -38,14 +42,10 @@ public class ITNotificationPanel : MonoBehaviour
         shield.SetActive(false);
         playButton.onClick.AddListener(PlayButtonPress);
         exitButton.onClick.AddListener(ExitButtonPress);
+        expandButton.onClick.AddListener(ExpandButtonPress);
 
         imageTrackerManager.ImageTrackedEvent += ShieldManager;
         imageTrackerManager.ImageLostEvent += ShieldManager;
-    }
-
-    void Update()
-    {
-        
     }
 
     void OnDestroy()
@@ -58,9 +58,9 @@ public class ITNotificationPanel : MonoBehaviour
     {
         if (!shield.activeSelf) //if panel is not already active
         {
-            currRef = imageTrackerManager.currentRef;
+            CurrRef = imageTrackerManager.currentRef;
 
-            if (currRef != null) //image is being tracked
+            if (CurrRef != null) //image is being tracked
             {
                 ReferenceSetter(); //set panel title and reset button state
                 shield.SetActive(true); //show panel
@@ -72,7 +72,7 @@ public class ITNotificationPanel : MonoBehaviour
 
     void ReferenceSetter()
     {
-        objectTitle.text = currRef;
+        objectTitle.text = CurrRef;
         playImage.sprite = playSprite;
         exitImage.sprite = exitSprite;
         isPlaying = false;
@@ -85,14 +85,14 @@ public class ITNotificationPanel : MonoBehaviour
         {
             playImage.sprite = playSprite;
             exitImage.sprite = exitSprite;
-            audioManager.PauseSound(currRef);
+            audioManager.PauseSound(CurrRef);
         }
 
         else //showing the default play button -- will change from paused state to playing state
         {
             playImage.sprite = pauseSprite;
             exitImage.sprite = stopSprite;
-            audioManager.PlaySound(currRef);
+            audioManager.PlaySound(CurrRef);
         }
 
         isPlaying = !isPlaying; //flip state of the play checker bool
@@ -111,20 +111,19 @@ public class ITNotificationPanel : MonoBehaviour
         {
             playImage.sprite = replaySprite;
             exitImage.sprite = exitSprite;
-            audioManager.StopSound(currRef);
+            audioManager.StopSound(CurrRef);
             isPlaying = false;
         }
 
         canExit = !canExit; //flip state of the exit checker bool
     }
 
-    void TrackingImage()
+    void ExpandButtonPress()
     {
-
-    }
-
-    void TrackingLost()
-    {
-
+        if (PlayerExpandEvent != null) //Fires only when an image is newly tracked
+        {
+            PlayerExpandEvent();
+        }
+        shield.SetActive(false);
     }
 }
