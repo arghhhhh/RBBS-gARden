@@ -9,25 +9,25 @@ public class PlayerWindow : MonoBehaviour
     protected Director director;
     protected ImageTrackerManager imageTrackerManager;
 
-    protected string currRef;
-
     public GameObject player;
     public Button playButton;
     public Button exitButton;
 
-    protected Sprite playSprite;
-    protected Sprite pauseSprite;
-    protected Sprite replaySprite;
-    protected Sprite exitSprite;
-    protected Sprite stopSprite;
+    public Sprite playSprite;
+    public Sprite pauseSprite;
+    public Sprite replaySprite;
+    public Sprite exitSprite;
+    public Sprite stopSprite;
 
     protected bool isPlaying;
     protected bool canExit;
 
-    protected Image playImage;
-    protected Image exitImage;
+    protected string currRef;
 
-    protected Text objectTitle;
+    public Image playImage;
+    public Image exitImage;
+
+    public Text objectTitle;
 
     protected MiniPlayer miniPlayer;
     protected FullPlayer fullPlayer;

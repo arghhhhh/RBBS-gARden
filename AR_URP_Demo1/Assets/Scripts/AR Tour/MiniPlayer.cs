@@ -6,8 +6,6 @@ using EasyUI.Toast;
 
 public class MiniPlayer : PlayerWindow
 {
-    
-
     public Button expandButton;
 
     void Start()
@@ -42,8 +40,6 @@ public class MiniPlayer : PlayerWindow
                 if (director.debug)
                     Toast.Show("Reference is " + currRef + "!", 2f);
                 ReferenceSetter(); //set panel title and reset button state
-                if (director.debug)
-                    Toast.Show("Made it through ReferenceSetter!", 2f);
                 player.SetActive(true); //show panel
 
                 //prevRef = currRef;
@@ -53,6 +49,7 @@ public class MiniPlayer : PlayerWindow
 
     void ReferenceSetter()
     {
+        currRef = "Avocado Plant";
         objectTitle.text = currRef;
         playImage.sprite = playSprite;
         exitImage.sprite = exitSprite;

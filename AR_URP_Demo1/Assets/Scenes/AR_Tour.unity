@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1498,6 +1498,14 @@ MonoBehaviour:
   player: {fileID: 657226172}
   playButton: {fileID: 4697798690036551088}
   exitButton: {fileID: 1273511853835221426}
+  playSprite: {fileID: 21300000, guid: f8b03a8f6d4a5c940af6a43ccd6bd964, type: 3}
+  pauseSprite: {fileID: 21300000, guid: 07cccb1914c1e7b4382605db46ab3474, type: 3}
+  replaySprite: {fileID: 21300000, guid: 40a63a589de506d4a8a93550dc8b001a, type: 3}
+  exitSprite: {fileID: 21300000, guid: d092f6ee59cc4e3498cc7b902860a87f, type: 3}
+  stopSprite: {fileID: 21300000, guid: 434c0e46daf6dd5458a8bdf0eca97eb1, type: 3}
+  playImage: {fileID: 946943959957675971}
+  exitImage: {fileID: 2283572657947290468}
+  objectTitle: {fileID: 981919912}
   cam: {fileID: 768438072}
   minimizeButton: {fileID: 8434072840985811865}
   backButton: {fileID: 1022088280149396925}
@@ -1519,6 +1527,14 @@ MonoBehaviour:
   player: {fileID: 11412259}
   playButton: {fileID: 525298733350179621}
   exitButton: {fileID: 490531394770289871}
+  playSprite: {fileID: 21300000, guid: f8b03a8f6d4a5c940af6a43ccd6bd964, type: 3}
+  pauseSprite: {fileID: 21300000, guid: 07cccb1914c1e7b4382605db46ab3474, type: 3}
+  replaySprite: {fileID: 21300000, guid: 40a63a589de506d4a8a93550dc8b001a, type: 3}
+  exitSprite: {fileID: 21300000, guid: d092f6ee59cc4e3498cc7b902860a87f, type: 3}
+  stopSprite: {fileID: 21300000, guid: 434c0e46daf6dd5458a8bdf0eca97eb1, type: 3}
+  playImage: {fileID: 4555667023683857930}
+  exitImage: {fileID: 4520612212806138336}
+  objectTitle: {fileID: 6239415779360077695}
   expandButton: {fileID: 675605469}
 --- !u!1 &1386606759
 GameObject:

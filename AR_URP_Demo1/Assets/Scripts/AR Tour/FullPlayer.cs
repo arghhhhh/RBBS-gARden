@@ -41,19 +41,15 @@ public class FullPlayer : PlayerWindow
         backButton.SetActive(false);
         if (currRef != null && audioManager != null)
         {
-            if (audioManager.IsSoundPlaying(currRef))
+            if (isPlaying)
             {
                 playImage.sprite = pauseSprite;
                 exitImage.sprite = stopSprite;
-                isPlaying = true;
-                canExit = false;
             }
             else
             {
                 playImage.sprite = playSprite;
                 exitImage.sprite = exitSprite;
-                isPlaying = false;
-                canExit = true;
             }
         }
         LoadPrefab();
