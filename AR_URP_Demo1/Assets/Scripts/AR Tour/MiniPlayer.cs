@@ -4,51 +4,24 @@ using System.Collections;
 using System.Collections.Generic;
 using EasyUI.Toast;
 
-public class MiniPlayer : MonoBehaviour
+public class MiniPlayer : PlayerWindow
 {
-    private AudioManager audioManager;
-
-    public GameObject shield;
-
-    public Button playButton;
-    public Button exitButton;
-    public Image playImage;
-    public Image exitImage;
-    public Sprite playSprite;
-    public Sprite pauseSprite;
-    public Sprite replaySprite;
-    public Sprite exitSprite;
-    public Sprite stopSprite;
-    public Text objectTitle;
-
-    private bool isPlaying;
-    private bool canExit;
-
-    private ImageTrackerManager imageTrackerManager;
-    public string CurrRef { get; private set; }
+    
 
     public Button expandButton;
-    public delegate void PlayerExpanded();
-    public event PlayerExpanded PlayerExpandEvent;
-
-    private Director director;
-
-    void Awake()
-    {
-        director = FindObjectOfType<Director>();
-        audioManager = FindObjectOfType<AudioManager>();
-        imageTrackerManager = FindObjectOfType<ImageTrackerManager>();
-    }
 
     void Start()
     {
-        shield.SetActive(false);
+        player.SetActive(false);
         playButton.onClick.AddListener(PlayButtonPress);
         exitButton.onClick.AddListener(ExitButtonPress);
         expandButton.onClick.AddListener(ExpandButtonPress);
 
         imageTrackerManager.ImageTrackedEvent += ShieldManager;
         imageTrackerManager.ImageLostEvent += ShieldManager;
+
+        if (director.debug)
+            Toast.Show("Image tracker manager is named " + imageTrackerManager.name, 2f);
     }
 
     void OnDestroy()
@@ -59,14 +32,19 @@ public class MiniPlayer : MonoBehaviour
 
     void ShieldManager()
     {
-        if (!shield.activeSelf) //if panel is not already active
+        
+        if (!player.activeSelf) //if panel is not already active
         {
-            CurrRef = imageTrackerManager.currentRef;
+            if (director.debug)
+                Toast.Show("Player seems to be active!", 2f);
+            currRef = imageTrackerManager.currentRef;
 
-            if (CurrRef != null) //image is being tracked
+            if (currRef != null) //image is being tracked
             {
+                if (director.debug)
+                    Toast.Show("Reference is not null, it's " + currRef + "!", 2f);
                 ReferenceSetter(); //set panel title and reset button state
-                shield.SetActive(true); //show panel
+                player.SetActive(true); //show panel
 
                 //prevRef = currRef;
             }
@@ -75,7 +53,7 @@ public class MiniPlayer : MonoBehaviour
 
     void ReferenceSetter()
     {
-        objectTitle.text = CurrRef;
+        objectTitle.text = currRef;
         playImage.sprite = playSprite;
         exitImage.sprite = exitSprite;
         isPlaying = false;
@@ -88,14 +66,14 @@ public class MiniPlayer : MonoBehaviour
         {
             playImage.sprite = playSprite;
             exitImage.sprite = exitSprite;
-            audioManager.PauseSound(CurrRef);
+            audioManager.PauseSound(currRef);
         }
 
         else //showing the default play button -- will change from paused state to playing state
         {
             playImage.sprite = pauseSprite;
             exitImage.sprite = stopSprite;
-            audioManager.PlaySound(CurrRef);
+            audioManager.PlaySound(currRef);
         }
 
         isPlaying = !isPlaying; //flip state of the play checker bool
@@ -106,7 +84,7 @@ public class MiniPlayer : MonoBehaviour
     {
         if (canExit) //showing the exit button
         {
-            shield.SetActive(false); //hide panel
+            player.SetActive(false); //hide panel
             //have ImageTrackerManager check for a new reference on exit
         }
 
@@ -114,7 +92,7 @@ public class MiniPlayer : MonoBehaviour
         {
             playImage.sprite = replaySprite;
             exitImage.sprite = exitSprite;
-            audioManager.StopSound(CurrRef);
+            audioManager.StopSound(currRef);
             isPlaying = false;
         }
 
@@ -123,10 +101,7 @@ public class MiniPlayer : MonoBehaviour
 
     void ExpandButtonPress()
     {
-        if (PlayerExpandEvent != null) //Fires only when an image is newly tracked
-        {
-            PlayerExpandEvent();
-        }
-        shield.SetActive(false);
+        fullPlayer.PlayerSetup();
+        player.SetActive(false);
     }
 }

@@ -1,5 +1,6 @@
 App to do list, sorted by priority
 	__TODAY__	
+	[***] Build script that reads json data and uses it to populate prefab with tracked image data
 	[**] Fix player panel!!!
 		- Damn you avocado plant
 	[*] Make debug scene and ar tour scene the same scene
@@ -88,4 +89,13 @@ App to do list, sorted by priority
 		- Now I don't need to update the debugging scene every time I update the AR scene
 		- Used a sceneManager with a DontDestroy script to pass debugging pref from the menu scene to the AR tour scene
 	[X] Fixed back button bug caused by duplicate calls to SceneLauncher.StoreSceneHistory()
+10/14
+	[X] Fixed loading of prefabs in full player screen
+		- Had to ditch the original string.split() technique
+	[X] Built JSON database containing different attributes of image tracking objects
+		- Using SimpleJSON plugin to parse data (check wayback machine for wiki)
+	[X] Created PlayerWindow class as a base class for each player (mini and full) to inherit
+		- Allows me to repeat less stuff === less room for error :D
+	[X] Removed white bg sphere because I can set the stationary camera background to white anyways
+	
 	

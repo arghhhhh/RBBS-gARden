@@ -1,0 +1,16 @@
+{
+   "Coconut Palm":{
+      "prefab":"LogoBlue"
+   },
+   "Cherry Laurel":{
+      "prefab":"LogoGreen"
+   },
+   "Ponytail Palm":{
+      "prefab":"LogoRed"
+   },
+   "Avocado Plant":{
+      "prefab":"LogoWhite",
+      "description":"The avocado plant is an evergreen tree (semi-deciduous in cooler climates) that is native to Central America. It is cultivated all over the world for its nutritious fruits. Avocado has become an important plant in many cuisines due to its high nutrient and fat content, creamy texture, and distinct taste.",
+      "description2":"The word 'avocado' originally derives from a rendering of the Nahuatl word  'avogato', which was sometimes used with the meaning 'testicle', probably because of the similarity between the fruit and the body part."
+   }
+}
