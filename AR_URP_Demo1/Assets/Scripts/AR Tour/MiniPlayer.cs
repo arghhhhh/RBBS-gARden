@@ -35,15 +35,15 @@ public class MiniPlayer : PlayerWindow
         
         if (!player.activeSelf) //if panel is not already active
         {
-            if (director.debug)
-                Toast.Show("Player seems to be active!", 2f);
             currRef = imageTrackerManager.currentRef;
 
             if (currRef != null) //image is being tracked
             {
                 if (director.debug)
-                    Toast.Show("Reference is not null, it's " + currRef + "!", 2f);
+                    Toast.Show("Reference is " + currRef + "!", 2f);
                 ReferenceSetter(); //set panel title and reset button state
+                if (director.debug)
+                    Toast.Show("Made it through ReferenceSetter!", 2f);
                 player.SetActive(true); //show panel
 
                 //prevRef = currRef;
