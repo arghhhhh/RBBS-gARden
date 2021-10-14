@@ -98,6 +98,8 @@ public class MiniPlayer : PlayerWindow
 
     void ExpandButtonPress()
     {
+        if (director.debug)
+            Toast.Show("Expand button pressed!", 2f);
         fullPlayer.PlayerSetup();
         player.SetActive(false);
     }
