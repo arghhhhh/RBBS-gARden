@@ -11,6 +11,7 @@ public class FullPlayer : PlayerWindow
     private GameObject objectPrefab;
     public Button minimizeButton;
     public GameObject backButton;
+    public GameObject player;
 
     public float forwardDistance, upDistance;
 
@@ -29,17 +30,16 @@ public class FullPlayer : PlayerWindow
         playButton.onClick.AddListener(PlayButtonPress);
         exitButton.onClick.AddListener(ExitButtonPress);
         minimizeButton.onClick.AddListener(MinimizeButtonPress);
+        PlayerSetup();
     }
 
     public void PlayerSetup()
     {
-        if (director.debug)
-            Toast.Show("PlayerExpandEvent triggered");
         currRef = imageTrackerManager.currentRef;
         cam.enabled = true; //enable background
         player.SetActive(true); //enable player
         backButton.SetActive(false);
-        if (currRef != null && audioManager != null)
+        if (currRef != null)
         {
             if (isPlaying)
             {

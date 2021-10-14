@@ -7,6 +7,7 @@ using EasyUI.Toast;
 public class MiniPlayer : PlayerWindow
 {
     public Button expandButton;
+    public GameObject player;
 
     void Start()
     {

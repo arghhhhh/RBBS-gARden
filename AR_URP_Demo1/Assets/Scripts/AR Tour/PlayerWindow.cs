@@ -9,7 +9,7 @@ public class PlayerWindow : MonoBehaviour
     protected Director director;
     protected ImageTrackerManager imageTrackerManager;
 
-    public GameObject player;
+    //public GameObject player;
     public Button playButton;
     public Button exitButton;
 
