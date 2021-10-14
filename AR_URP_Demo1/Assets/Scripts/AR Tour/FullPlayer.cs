@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using Joss.Helpers;
+using EasyUI.Toast;
 
 public class FullPlayer : MonoBehaviour
 {
@@ -28,19 +29,21 @@ public class FullPlayer : MonoBehaviour
     private bool isPlaying;
     private bool canExit;
 
-    private MiniPlayer miniPlayer;
+    public MiniPlayer miniPlayer;
 
     public TextAsset dataFile;
-    private string[][] dataPairs;
+    public string[][] dataPairs;
 
     public float forwardDistance, upDistance;
 
-    private DebugUIManager debugger;
+    private Director director;
+
+    private string refName;
 
     void Awake()
     {
-        miniPlayer = FindObjectOfType<MiniPlayer>();
-        debugger = FindObjectOfType<DebugUIManager>();
+        director = FindObjectOfType<Director>();
+        audioManager = director.GetComponent<AudioManager>();
         shield.SetActive(false);
         backgroundSphere.SetActive(false);
         cam.enabled = false;
@@ -62,23 +65,29 @@ public class FullPlayer : MonoBehaviour
 
     void PlayerSetup()
     {
+        if (director.debug)
+            Toast.Show("PlayerExpandEvent triggered");
+        refName = miniPlayer.CurrRef;
         cam.enabled = true; //enable background
         shield.SetActive(true); //enable canvas
         backgroundSphere.SetActive(true);
         backButton.gameObject.SetActive(false);
-        if (audioManager.IsSoundPlaying(miniPlayer.CurrRef)) 
+        if (refName != null && audioManager != null)
         {
-            playImage.sprite = pauseSprite;
-            exitImage.sprite = stopSprite;
-            isPlaying = true;
-            canExit = false;
-        }
-        else
-        {
-            playImage.sprite = playSprite;
-            exitImage.sprite = exitSprite;
-            isPlaying = false;
-            canExit = true;
+            if (audioManager.IsSoundPlaying(refName))
+            {
+                playImage.sprite = pauseSprite;
+                exitImage.sprite = stopSprite;
+                isPlaying = true;
+                canExit = false;
+            }
+            else
+            {
+                playImage.sprite = playSprite;
+                exitImage.sprite = exitSprite;
+                isPlaying = false;
+                canExit = true;
+            }
         }
         LoadPrefab();
     }
@@ -89,14 +98,14 @@ public class FullPlayer : MonoBehaviour
         {
             playImage.sprite = playSprite;
             exitImage.sprite = exitSprite;
-            audioManager.PauseSound(miniPlayer.CurrRef);
+            audioManager.PauseSound(refName);
         }
 
         else //showing the default play button -- will change from paused state to playing state
         {
             playImage.sprite = pauseSprite;
             exitImage.sprite = stopSprite;
-            audioManager.PlaySound(miniPlayer.CurrRef);
+            audioManager.PlaySound(refName);
         }
 
         isPlaying = !isPlaying; //flip state of the play checker bool
@@ -107,7 +116,7 @@ public class FullPlayer : MonoBehaviour
     {
         if (canExit) //showing the exit button
         {
-            shield.SetActive(false); //hide panel
+            CloseButtonPress();
             //have ImageTrackerManager check for a new reference on exit
         }
 
@@ -115,7 +124,7 @@ public class FullPlayer : MonoBehaviour
         {
             playImage.sprite = replaySprite;
             exitImage.sprite = exitSprite;
-            audioManager.StopSound(miniPlayer.CurrRef);
+            audioManager.StopSound(refName);
             isPlaying = false;
         }
 
@@ -133,29 +142,59 @@ public class FullPlayer : MonoBehaviour
 
     void SortObjectPairs()
     {
-        string[] dataLines = dataFile.text.Split('\n');
-        dataPairs = new string[dataLines.Length][];
-        int lineNum = 0;
-        foreach (string line in dataLines)
+        string[] dataLines = dataFile.text.Split('\n');//splits text data into separate lines 
+        Debug.LogError("DataLines contains " + dataLines.Length + " items");
+        if (dataLines.Length != 0)
         {
-            dataPairs[lineNum++] = line.Split(',');
+            dataPairs = new string[dataLines.Length][];
+        }
+        else
+        {
+            Toast.Show("Error sorting text data!", 2f);
+        }
+        if (dataPairs.GetLength(0) != 0)
+        {
+            int lineNum = 0;
+            foreach (string line in dataLines)
+            {
+                dataPairs[lineNum++] = line.Split(',');
+            }
+            for (int i = 0; i < dataPairs.GetLength(0); i++)
+            {
+                Toolbox.RemoveLineEndings(dataPairs[i][1]);
+            }
         }
     }
 
     void LoadPrefab()
     {
-        for (int i = 0; i < dataPairs.GetLength(0); i++)
+        if (refName != null)
         {
-            if (dataPairs[i][0] == miniPlayer.CurrRef)
+            for (int i = 0; i < 4; i++)
             {
-                objectTitle.text = miniPlayer.CurrRef;
-                //objectAnimation = Instantiate(Resources.Load("Prefabs/HUBB/" + dataPairs[i][1]) as GameObject);
-                objectAnimation = Instantiate(Resources.Load("Prefabs/HUBB/Logo Red") as GameObject);
-                objectAnimation.transform.position = cam.transform.position + cam.transform.forward * forwardDistance
-                    + cam.transform.up * upDistance;
-                objectAnimation.transform.SetParent(backgroundSphere.transform);
+                if (dataPairs.Length != 0)
+                {
+                    if (dataPairs[i][0] == refName)
+                    {
+                        objectTitle.text = refName;
+                        objectAnimation = Instantiate(Resources.Load<GameObject>("Prefabs/HUBB/" + dataPairs[i][1]));
+                        if (objectAnimation != null)
+                        {
+                            if (director.debug)
+                                Toast.Show("Instantiated " + "Prefabs/HUBB/" + dataPairs[i][1] + " as GameObject", 3f);
+                            objectAnimation.transform.position = cam.transform.position + cam.transform.forward * forwardDistance
+                            + cam.transform.up * upDistance;
+                            objectAnimation.transform.SetParent(backgroundSphere.transform);
+                        }
+                        else
+                            Toast.Show("Could not instantiate Prefabs/HUBB/" + dataPairs[i][1] + " as GameObject", 3f);
+                    }
+                    if (dataPairs[i][0] == refName) break;
+                }
             }
-            if (dataPairs[i][0] == miniPlayer.CurrRef) break;
         }
+        else
+            if (director.debug)
+                Toast.Show("Reference not found!", 2f);
     }
 }

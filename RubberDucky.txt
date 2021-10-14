@@ -1,3 +1,32 @@
 Dora talks to herself document: (aka Rubber ducky)
 
-I could change the audio mixer group of an object outside the frame to one that includes an already set lowpass filter
+there are two possible culprits I can think of that would cause Full Player not to open
+1. SortObjectPairs...lets try removing that
+2. ToastUI (not sure why this would cause errors but I did recently add it)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+audioSource.time gets the current time state of the audioSource being played
+audioSource.clip.length gets the length of a given audioSource
+
+once Audio gets played, create an IEnumarator that counts time until audioSource.clip.length-audioSource.time is reached,
+	but that can also yield in the event that the pause button is pressed
+	- or pressing pause could stop the coroutine and pressing play could reset it
+
+

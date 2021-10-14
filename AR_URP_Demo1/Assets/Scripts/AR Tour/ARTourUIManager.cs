@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
-using Joss.SceneManagement;
+using Joss.Helpers;
+using EasyUI.Toast;
 
 public class ARTourUIManager : MonoBehaviour
 {
@@ -16,7 +17,13 @@ public class ARTourUIManager : MonoBehaviour
     [SerializeField]
     private ARTrackedImageManager arTrackedImageManager;
 
-    
+    private Director director;
+
+    void Awake()
+    {
+        director = FindObjectOfType<Director>();
+    }
+
     void Start()
     {
         acceptButton.onClick.AddListener(AcceptButtonPress);
@@ -29,5 +36,7 @@ public class ARTourUIManager : MonoBehaviour
         uiPopup.SetActive(false);
         blurSphere.SetActive(false);
         arTrackedImageManager.enabled = true;
+        if (director.debug)
+            Toast.Show("Debugging Toast Checkpoint 1", 2f);
     }
 }

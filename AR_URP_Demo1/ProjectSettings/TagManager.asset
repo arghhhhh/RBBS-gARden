@@ -7,6 +7,8 @@ TagManager:
   - Test
   - Canvas
   - Debug
+  - ToastTxt
+  - ToastImg
   layers:
   - Default
   - TransparentFX

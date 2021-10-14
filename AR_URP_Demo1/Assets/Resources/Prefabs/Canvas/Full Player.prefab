@@ -485,6 +485,7 @@ MonoBehaviour:
   exitSprite: {fileID: 21300000, guid: d092f6ee59cc4e3498cc7b902860a87f, type: 3}
   stopSprite: {fileID: 21300000, guid: 434c0e46daf6dd5458a8bdf0eca97eb1, type: 3}
   objectTitle: {fileID: 5872319330390599484}
+  miniPlayer: {fileID: 0}
   dataFile: {fileID: 4900000, guid: fc8dce23b33adf649a0d9e5a3193e60e, type: 3}
   forwardDistance: 0.3
   upDistance: 0.03

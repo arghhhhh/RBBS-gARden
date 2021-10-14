@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace Joss.SceneManagement
+namespace Joss.Helpers
 {
     public class SceneLauncher
     {

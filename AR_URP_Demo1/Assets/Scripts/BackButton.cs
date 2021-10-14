@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
-using Joss.SceneManagement;
+using Joss.Helpers;
 
 public class BackButton : MonoBehaviour
 {

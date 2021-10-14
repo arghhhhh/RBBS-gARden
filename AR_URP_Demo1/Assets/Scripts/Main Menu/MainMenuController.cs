@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
-using Joss.SceneManagement;
+using Joss.Helpers;
 
 public class MainMenuController : MonoBehaviour
 {
@@ -14,16 +14,23 @@ public class MainMenuController : MonoBehaviour
     [SerializeField]
     private Button debugButton;
 
-    public static DebugUIManager debugger;
+    private Director director;
 
     void Awake()
     {
+        director = FindObjectOfType<Director>();
+
         infoButton.onClick.AddListener(LoadInfo);
         arButton.onClick.AddListener(LoadAR);
         mapButton.onClick.AddListener(LoadMap);
         debugButton.onClick.AddListener(LoadDebug);
 
         SceneLauncher.StoreSceneHistory();
+    }
+
+    void Start()
+    {
+        director.debug = false;
     }
 
     void LoadInfo() 
@@ -43,6 +50,7 @@ public class MainMenuController : MonoBehaviour
 
     void LoadDebug()
     {
-        SceneLauncher.GoToScene(2);
+        director.debug = true;
+        SceneLauncher.GoToScene(1);
     }
 }

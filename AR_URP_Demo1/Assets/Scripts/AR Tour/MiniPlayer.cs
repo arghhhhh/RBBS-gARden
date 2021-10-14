@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
+using EasyUI.Toast;
 
 public class MiniPlayer : MonoBehaviour
 {
@@ -27,12 +28,14 @@ public class MiniPlayer : MonoBehaviour
     public string CurrRef { get; private set; }
 
     public Button expandButton;
-    public GameObject fullPlayer;
     public delegate void PlayerExpanded();
     public event PlayerExpanded PlayerExpandEvent;
 
+    private Director director;
+
     void Awake()
     {
+        director = FindObjectOfType<Director>();
         audioManager = FindObjectOfType<AudioManager>();
         imageTrackerManager = FindObjectOfType<ImageTrackerManager>();
     }

@@ -1,6 +1,7 @@
 App to do list, sorted by priority
 	__TODAY__	
-	[**] Create full screen player panel with animated prefab
+	[**] Fix player panel!!!
+		- Damn you avocado plant
 	[*] Make debug scene and ar tour scene the same scene
 		- Need a static bool attached to level manager object with a dontdestroyonload behavior
 	[*] Get tracker reference to rescan on panel exit
@@ -79,4 +80,12 @@ App to do list, sorted by priority
 		- Now it's the exact same as the AR tour scene, with added debugging features
 	[X] Demoed the app to Jose Matto and John Mills
 		- Discussed future AR features such as animated players
+		
+10/13
+	[X] Converted AudioManager to SceneManager
+		- Can now pass variables between scenes with Director script
+	[X] Integrated debugging feature into normal AR scene
+		- Now I don't need to update the debugging scene every time I update the AR scene
+		- Used a sceneManager with a DontDestroy script to pass debugging pref from the menu scene to the AR tour scene
+	[X] Fixed back button bug caused by duplicate calls to SceneLauncher.StoreSceneHistory()
 	

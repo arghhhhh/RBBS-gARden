@@ -2,7 +2,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using UnityEngine.XR.ARFoundation;
-using Joss.SceneManagement;
 
 public class DebugUIManager : MonoBehaviour
 {
@@ -11,29 +10,31 @@ public class DebugUIManager : MonoBehaviour
     public Button blurButton;
     public Button cameraButton;
     public GameObject gpsText;
-    public GameObject inspector;
+    public GameObject runtimeInspector;
+    public GameObject runtimeHeirarchy;
     public GameObject blurSphere;
     public ARSession arSession;
 
-    public bool debug;
-    public GameObject debugger;
     public Text debug1;
     public Text debug2;
     public Text debug3;
     public Text debug4;
 
-    void Awake()
-    {
-        gpsText.SetActive(false);
-        inspector.SetActive(false);
-    }
     void Start()
     {
+        if (!FindObjectOfType<Director>().debug) //destroy all debuggging stuff if debugging not selected
+        {
+            Destroy(gameObject);
+        }
+
+        gpsText.SetActive(false);
+        runtimeInspector.SetActive(false);
+        runtimeHeirarchy.SetActive(false);
+
         gpsButton.onClick.AddListener(GpsButtonPress);
         inspectButton.onClick.AddListener(InspectButtonPress);
         blurButton.onClick.AddListener(BlurButtonPress);
         cameraButton.onClick.AddListener(CameraButtonPress);
-        SceneLauncher.StoreSceneHistory();
     }
 
     void GpsButtonPress()
@@ -51,13 +52,18 @@ public class DebugUIManager : MonoBehaviour
 
     void InspectButtonPress()
     {
-        if (!inspector.activeSelf)
+        if (!runtimeHeirarchy.activeSelf && !runtimeInspector.activeSelf)
         {
-            inspector.SetActive(true);
+            runtimeHeirarchy.SetActive(true);
+        }
+        else if (runtimeHeirarchy.activeSelf && !runtimeInspector.activeSelf)
+        {
+            runtimeInspector.SetActive(true);
         }
         else
         {
-            inspector.SetActive(false);
+            runtimeHeirarchy.SetActive(false);
+            runtimeInspector.SetActive(false);
             EventSystem.current.SetSelectedGameObject(null); //disables button selected color
         }
     }
@@ -88,11 +94,4 @@ public class DebugUIManager : MonoBehaviour
             EventSystem.current.SetSelectedGameObject(null); //disables button selected color
         }
     }
-
-    //private GameObject GetAncestor(GameObject item)
-    //{
-    //    if (item.transform.parent == null)
-    //        return item;
-    //    return(GetAncestor(item.transform.parent.gameObject));
-    //}
 }
