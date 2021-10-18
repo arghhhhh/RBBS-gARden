@@ -8,40 +8,31 @@ using SimpleJSON;
 public class FullPlayer : PlayerWindow
 {
     public Camera cam;
-    private GameObject objectPrefab;
+    public GameObject objectPrefab { get; private set; }
     public Button minimizeButton;
     public GameObject backButton;
-    public GameObject player;
 
     public float forwardDistance, upDistance;
 
     public TextAsset dataFile;
     private JSONNode jsonData;
 
-    void Awake()
-    {
-        player.SetActive(false);
-        cam.enabled = false;
-    }
-
     void Start()
     {
+        shield.SetActive(false);
+        cam.enabled = false;
+
         jsonData = JSON.Parse(dataFile.text);
         playButton.onClick.AddListener(PlayButtonPress);
         exitButton.onClick.AddListener(ExitButtonPress);
         minimizeButton.onClick.AddListener(MinimizeButtonPress);
-        PlayerSetup();
     }
 
     public void PlayerSetup()
     {
-        currRef = imageTrackerManager.currentRef;
-        cam.enabled = true; //enable background
-        player.SetActive(true); //enable player
-        backButton.SetActive(false);
         if (currRef != null)
         {
-            if (isPlaying)
+            if (director.playingAudio == currRef)
             {
                 playImage.sprite = pauseSprite;
                 exitImage.sprite = stopSprite;
@@ -51,17 +42,23 @@ public class FullPlayer : PlayerWindow
                 playImage.sprite = playSprite;
                 exitImage.sprite = exitSprite;
             }
+            cam.enabled = true; //enable background
+            shield.SetActive(true); //enable player
+            backButton.SetActive(false);
+            LoadPrefab();
         }
-        LoadPrefab();
+        else if (director.debug)
+            Toast.Show("PlayerSetup(): Object reference is null!", 2f);
     }
 
     void PlayButtonPress() //triggered whenever the play button is pressed
     {
-        if (isPlaying) //showing the pause button -- will change from playing state to paused state
+        if (director.playingAudio == currRef) //showing the pause button -- will change from playing state to paused state
         {
             playImage.sprite = playSprite;
             exitImage.sprite = exitSprite;
             audioManager.PauseSound(currRef);
+            director.playingAudio = string.Empty;
         }
 
         else //showing the default play button -- will change from paused state to playing state
@@ -69,9 +66,9 @@ public class FullPlayer : PlayerWindow
             playImage.sprite = pauseSprite;
             exitImage.sprite = stopSprite;
             audioManager.PlaySound(currRef);
+            director.playingAudio = currRef;
         }
 
-        isPlaying = !isPlaying; //flip state of the play checker bool
         canExit = !canExit; //flip state of the exit checker bool -- this is because the exit button state is directly tied to the play button state
     }
 
@@ -88,18 +85,19 @@ public class FullPlayer : PlayerWindow
             playImage.sprite = replaySprite;
             exitImage.sprite = exitSprite;
             audioManager.StopSound(currRef);
-            isPlaying = false;
+            director.playingAudio = string.Empty;
+            canExit = true;
         }
-
-        canExit = !canExit; //flip state of the exit checker bool
     }
 
     void MinimizeButtonPress()
     {
-        Destroy(objectPrefab);
+        if (objectPrefab != null)
+            objectPrefab.SetActive(false);
         cam.enabled = false;
-        player.SetActive(false);
-        backButton.gameObject.SetActive(true);
+        shield.SetActive(false);
+        backButton.SetActive(true);
+        miniPlayer.ReferenceSetter(currRef);
     }
 
     void LoadPrefab()
@@ -107,20 +105,28 @@ public class FullPlayer : PlayerWindow
         if (currRef != null)
         {
             objectTitle.text = currRef;
-            objectPrefab = Instantiate(Resources.Load<GameObject>("Prefabs/HUBB/" + jsonData[currRef]["prefab"].Value));
+            if (objectPrefab != null) //if object prefab has already been created
+                objectPrefab.SetActive(true);
+            else //if object prefab has not been instantiated yet
+                objectPrefab = Instantiate(Resources.Load<GameObject>("Prefabs/HUBB/" + jsonData[currRef]["prefab"].Value));
             if (objectPrefab != null)
             {
                 if (director.debug)
                     Toast.Show("Instantiated " + "Prefabs/HUBB/" + jsonData[currRef]["prefab"].Value + " as GameObject", 3f);
                 objectPrefab.transform.position = cam.transform.position + cam.transform.forward * forwardDistance
                 + cam.transform.up * upDistance;
-                //objectPrefab.transform.SetParent(backgroundSphere.transform);
+                float scale = float.Parse(jsonData[currRef]["scale"].Value);
+                if (scale != float.NaN)
+                {
+                    if (director.debug)
+                        Toast.Show("Scale is " + scale, 3f);
+                    objectPrefab.transform.localScale = new Vector3(scale, scale, scale);
+                }
             }
             else
                 Toast.Show("Could not instantiate Prefabs/HUBB/" + jsonData[currRef]["prefab"].Value + " as GameObject", 3f);
         }
-        else
-            if (director.debug)
-                Toast.Show("Reference not found!", 2f);
+        else if (director.debug)
+            Toast.Show("Reference not found!", 2f);
     }
 }

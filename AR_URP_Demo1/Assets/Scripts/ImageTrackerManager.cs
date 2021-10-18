@@ -58,7 +58,7 @@ public class ImageTrackerManager : MonoBehaviour
     {
         refLibrary = arTrackedImageManager.referenceLibrary;
         refImageCount = refLibrary.count;
-        //LoadObjectDictionary();
+        LoadObjectDictionary();
     }
 
     void LoadObjectDictionary()
@@ -81,7 +81,7 @@ public class ImageTrackerManager : MonoBehaviour
     void ActivateTrackedObject(string imageName)
     {
         Debug.Log("Tracked the target: " + imageName);
-        //allObjects[imageName].SetActive(true); //need to disable this as well to prevent prefabs from loading smh
+        allObjects[imageName].SetActive(true); //need to disable this as well to prevent prefabs from loading smh
 
         //DEBUG
         {
@@ -99,7 +99,6 @@ public class ImageTrackerManager : MonoBehaviour
         {
             if (!tracked)
             {
-                //allObjects[trackedImage.referenceImage.name].SetActive(true); //set ar prefab object to active -- will eventually depricate this feature
                 currentRef = trackedImage.referenceImage.name; //this reference will tell the IT Panel which object has most recently been tracked
 
                 if (ImageTrackedEvent != null) //Fires only when an image is newly tracked
@@ -108,6 +107,12 @@ public class ImageTrackerManager : MonoBehaviour
                 }
                 tracked = true;
             }
+
+            //AR
+            allObjects[trackedImage.referenceImage.name].SetActive(true); //set ar prefab object to active
+            allObjects[trackedImage.referenceImage.name].transform.position = trackedImage.transform.position;
+            allObjects[trackedImage.referenceImage.name].transform.rotation = trackedImage.transform.rotation;
+            allObjects[trackedImage.referenceImage.name].transform.Rotate(90, 0, 0); //rotate image prefab to correct orientation
         }
 
         else //tracking state is limited or none
@@ -122,16 +127,19 @@ public class ImageTrackerManager : MonoBehaviour
                 }
                 tracked = false;
             }
+
+            //AR
+            allObjects[trackedImage.referenceImage.name].SetActive(false);
         }
 
         //DEBUG
-        //{
+        {
         //if (debugText || debugTextValue) //check if debug text has been assigned in inspector
         //{
         //    debugText.text = trackedImage.referenceImage.name;
         //    debugTextValue.text = "Tracking state: " + trackedImage.trackingState.ToString();
         //}
-        //}
+        }
     }
 
     public void OnImageChanged(ARTrackedImagesChangedEventArgs args)

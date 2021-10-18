@@ -9,7 +9,7 @@ public class PlayerWindow : MonoBehaviour
     protected Director director;
     protected ImageTrackerManager imageTrackerManager;
 
-    //public GameObject player;
+    public GameObject shield;
     public Button playButton;
     public Button exitButton;
 
@@ -19,10 +19,10 @@ public class PlayerWindow : MonoBehaviour
     public Sprite exitSprite;
     public Sprite stopSprite;
 
-    protected bool isPlaying;
-    protected bool canExit;
+    protected static bool isPlaying;
+    protected static bool canExit;
 
-    protected string currRef;
+    protected static string currRef;
 
     public Image playImage;
     public Image exitImage;
@@ -37,7 +37,7 @@ public class PlayerWindow : MonoBehaviour
         director = FindObjectOfType<Director>();
         audioManager = director.GetComponent<AudioManager>();
         imageTrackerManager = FindObjectOfType<ImageTrackerManager>();
-        miniPlayer = GetComponent<MiniPlayer>();
-        fullPlayer = GetComponent<FullPlayer>();
+        miniPlayer = FindObjectOfType<MiniPlayer>();
+        fullPlayer = FindObjectOfType<FullPlayer>();
     }
 }

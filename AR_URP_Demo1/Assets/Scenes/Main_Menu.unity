@@ -178,6 +178,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SceneManager
       objectReference: {fileID: 0}
+    - target: {fileID: 4991792815905348898, guid: 93ba0a829793f764a8c94d2632f5e60e, type: 3}
+      propertyPath: m_TagString
+      value: Director
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93ba0a829793f764a8c94d2632f5e60e, type: 3}
 --- !u!1 &1396381290
@@ -275,6 +279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debug: 0
+  playingAudio: 
 --- !u!1 &2124833891
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,6 +9,7 @@ TagManager:
   - Debug
   - ToastTxt
   - ToastImg
+  - Director
   layers:
   - Default
   - TransparentFX

@@ -36,7 +36,5 @@ public class ARTourUIManager : MonoBehaviour
         uiPopup.SetActive(false);
         blurSphere.SetActive(false);
         arTrackedImageManager.enabled = true;
-        if (director.debug)
-            Toast.Show("Debugging Toast Checkpoint 1", 2f);
     }
 }

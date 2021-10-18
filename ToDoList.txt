@@ -98,4 +98,12 @@ App to do list, sorted by priority
 		- Allows me to repeat less stuff === less room for error :D
 	[X] Removed white bg sphere because I can set the stationary camera background to white anyways
 	
+10/18
+	[X] Fixed full player not opening on expand button press
+		- Core functionality of players is now finished
+	[X] Created ref to playing audio in scene director
+		- Now back button can be used to stop audio on scene change
+	[X] Fixed protected variables in PlayerManager script
+		- They needed to be made static so the children could modify them in the base class
+	
 	

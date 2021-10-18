@@ -7,20 +7,17 @@ using EasyUI.Toast;
 public class MiniPlayer : PlayerWindow
 {
     public Button expandButton;
-    public GameObject player;
+    public string cardRef { get; private set; }
 
     void Start()
     {
-        player.SetActive(false);
+        shield.SetActive(false);
         playButton.onClick.AddListener(PlayButtonPress);
         exitButton.onClick.AddListener(ExitButtonPress);
         expandButton.onClick.AddListener(ExpandButtonPress);
 
         imageTrackerManager.ImageTrackedEvent += ShieldManager;
         imageTrackerManager.ImageLostEvent += ShieldManager;
-
-        if (director.debug)
-            Toast.Show("Image tracker manager is named " + imageTrackerManager.name, 2f);
     }
 
     void OnDestroy()
@@ -31,40 +28,51 @@ public class MiniPlayer : PlayerWindow
 
     void ShieldManager()
     {
-        
-        if (!player.activeSelf) //if panel is not already active
+        if (!shield.activeSelf && !fullPlayer.shield.activeSelf) //if panel is not already active
         {
             currRef = imageTrackerManager.currentRef;
+            cardRef = currRef;
 
             if (currRef != null) //image is being tracked
             {
                 if (director.debug)
                     Toast.Show("Reference is " + currRef + "!", 2f);
-                ReferenceSetter(); //set panel title and reset button state
-                player.SetActive(true); //show panel
-
-                //prevRef = currRef;
+                ReferenceSetter(currRef); //set panel title and reset button state
             }
         }
     }
 
-    void ReferenceSetter()
+    public void ReferenceSetter(string reference)
     {
-        currRef = "Avocado Plant";
-        objectTitle.text = currRef;
-        playImage.sprite = playSprite;
-        exitImage.sprite = exitSprite;
-        isPlaying = false;
-        canExit = true;
+        if (reference != null)
+        {
+            objectTitle.text = reference;
+            if (director.playingAudio == currRef)
+            {
+                playImage.sprite = pauseSprite;
+                exitImage.sprite = stopSprite;
+                canExit = false;
+            }
+            else
+            {
+                playImage.sprite = playSprite;
+                exitImage.sprite = exitSprite;
+                canExit = true;
+            }
+            shield.SetActive(true); //show panel
+        }
+        else if (director.debug)
+            Toast.Show("ReferenceSetter(): Object reference is null!", 2f);
     }
 
     void PlayButtonPress() //triggered whenever the play button is pressed
     {
-        if (isPlaying) //showing the pause button -- will change from playing state to paused state
+        if (director.playingAudio == currRef) //showing the pause button -- will change from playing state to paused state
         {
             playImage.sprite = playSprite;
             exitImage.sprite = exitSprite;
             audioManager.PauseSound(currRef);
+            director.playingAudio = string.Empty;
         }
 
         else //showing the default play button -- will change from paused state to playing state
@@ -72,9 +80,9 @@ public class MiniPlayer : PlayerWindow
             playImage.sprite = pauseSprite;
             exitImage.sprite = stopSprite;
             audioManager.PlaySound(currRef);
+            director.playingAudio = currRef;
         }
 
-        isPlaying = !isPlaying; //flip state of the play checker bool
         canExit = !canExit; //flip state of the exit checker bool -- this is because the exit button state is directly tied to the play button state
     }
 
@@ -82,7 +90,9 @@ public class MiniPlayer : PlayerWindow
     {
         if (canExit) //showing the exit button
         {
-            player.SetActive(false); //hide panel
+            if (fullPlayer.objectPrefab != null)
+                Destroy(fullPlayer.objectPrefab);
+            shield.SetActive(false); //hide panel
             //have ImageTrackerManager check for a new reference on exit
         }
 
@@ -91,7 +101,7 @@ public class MiniPlayer : PlayerWindow
             playImage.sprite = replaySprite;
             exitImage.sprite = exitSprite;
             audioManager.StopSound(currRef);
-            isPlaying = false;
+            director.playingAudio = string.Empty;
         }
 
         canExit = !canExit; //flip state of the exit checker bool
@@ -101,7 +111,7 @@ public class MiniPlayer : PlayerWindow
     {
         if (director.debug)
             Toast.Show("Expand button pressed!", 2f);
+        shield.SetActive(false);
         fullPlayer.PlayerSetup();
-        player.SetActive(false);
     }
 }
