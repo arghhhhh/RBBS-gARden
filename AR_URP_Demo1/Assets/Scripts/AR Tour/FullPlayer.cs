@@ -97,7 +97,7 @@ public class FullPlayer : PlayerWindow
         cam.enabled = false;
         shield.SetActive(false);
         backButton.SetActive(true);
-        miniPlayer.ReferenceSetter(currRef);
+        miniPlayer.LaunchPlayer(currRef);
     }
 
     void LoadPrefab()
@@ -118,8 +118,8 @@ public class FullPlayer : PlayerWindow
                 float scale = float.Parse(jsonData[currRef]["scale"].Value);
                 if (scale != float.NaN)
                 {
-                    if (director.debug)
-                        Toast.Show("Scale is " + scale, 3f);
+                    //if (director.debug)
+                    //    Toast.Show("Scale is " + scale, 3f);
                     objectPrefab.transform.localScale = new Vector3(scale, scale, scale);
                 }
             }

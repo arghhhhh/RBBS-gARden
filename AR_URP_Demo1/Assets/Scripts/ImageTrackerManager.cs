@@ -31,6 +31,8 @@ public class ImageTrackerManager : MonoBehaviour
 
     public string currentRef { get; private set; }
 
+    private FullPlayer fullPlayer;
+
     void Awake()
     {
         //initialized tracked image manager  
@@ -56,6 +58,7 @@ public class ImageTrackerManager : MonoBehaviour
 
     private void Start()
     {
+        fullPlayer = FindObjectOfType<FullPlayer>();
         refLibrary = arTrackedImageManager.referenceLibrary;
         refImageCount = refLibrary.count;
         LoadObjectDictionary();
@@ -109,10 +112,13 @@ public class ImageTrackerManager : MonoBehaviour
             }
 
             //AR
-            allObjects[trackedImage.referenceImage.name].SetActive(true); //set ar prefab object to active
-            allObjects[trackedImage.referenceImage.name].transform.position = trackedImage.transform.position;
-            allObjects[trackedImage.referenceImage.name].transform.rotation = trackedImage.transform.rotation;
-            allObjects[trackedImage.referenceImage.name].transform.Rotate(90, 0, 0); //rotate image prefab to correct orientation
+            if (!fullPlayer.shield.activeSelf) //hide tracked image prefab when fullscreen player is open
+            {
+                allObjects[trackedImage.referenceImage.name].SetActive(true); //set ar prefab object to active
+                allObjects[trackedImage.referenceImage.name].transform.position = trackedImage.transform.position;
+                allObjects[trackedImage.referenceImage.name].transform.rotation = trackedImage.transform.rotation;
+                allObjects[trackedImage.referenceImage.name].transform.Rotate(90, 0, 0); //rotate image prefab to correct orientation
+            }
         }
 
         else //tracking state is limited or none

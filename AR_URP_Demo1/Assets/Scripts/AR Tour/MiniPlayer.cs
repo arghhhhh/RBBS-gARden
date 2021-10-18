@@ -7,7 +7,6 @@ using EasyUI.Toast;
 public class MiniPlayer : PlayerWindow
 {
     public Button expandButton;
-    public string cardRef { get; private set; }
 
     void Start()
     {
@@ -31,18 +30,17 @@ public class MiniPlayer : PlayerWindow
         if (!shield.activeSelf && !fullPlayer.shield.activeSelf) //if panel is not already active
         {
             currRef = imageTrackerManager.currentRef;
-            cardRef = currRef;
 
             if (currRef != null) //image is being tracked
             {
                 if (director.debug)
                     Toast.Show("Reference is " + currRef + "!", 2f);
-                ReferenceSetter(currRef); //set panel title and reset button state
+                LaunchPlayer(currRef); //set panel title and reset button state
             }
         }
     }
 
-    public void ReferenceSetter(string reference)
+    public void LaunchPlayer(string reference)
     {
         if (reference != null)
         {
@@ -113,5 +111,11 @@ public class MiniPlayer : PlayerWindow
             Toast.Show("Expand button pressed!", 2f);
         shield.SetActive(false);
         fullPlayer.PlayerSetup();
+    }
+
+    public void SimulateTracking() //simulate image tracking for debugger
+    {
+        currRef = "Avocado Plant";
+        LaunchPlayer(currRef);
     }
 }

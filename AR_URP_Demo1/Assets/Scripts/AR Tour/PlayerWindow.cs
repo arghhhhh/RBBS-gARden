@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerWindow : MonoBehaviour
+public abstract class PlayerWindow : MonoBehaviour
 {
     protected AudioManager audioManager;
     protected Director director;

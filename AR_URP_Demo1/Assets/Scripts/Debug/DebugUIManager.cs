@@ -7,12 +7,11 @@ public class DebugUIManager : MonoBehaviour
 {
     public Button gpsButton;
     public Button inspectButton;
-    public Button blurButton;
+    public Button simulateTrackButton;
     public Button cameraButton;
     public GameObject gpsText;
     public GameObject runtimeInspector;
     public GameObject runtimeHeirarchy;
-    public GameObject blurSphere;
     public ARSession arSession;
 
     public Text debug1;
@@ -33,7 +32,7 @@ public class DebugUIManager : MonoBehaviour
 
         gpsButton.onClick.AddListener(GpsButtonPress);
         inspectButton.onClick.AddListener(InspectButtonPress);
-        blurButton.onClick.AddListener(BlurButtonPress);
+        simulateTrackButton.onClick.AddListener(SimulateTrackButtonPress);
         cameraButton.onClick.AddListener(CameraButtonPress);
     }
 
@@ -68,17 +67,11 @@ public class DebugUIManager : MonoBehaviour
         }
     }
 
-    void BlurButtonPress()
+    void SimulateTrackButtonPress()
     {
-        if (!blurSphere.activeSelf)
-        {
-            blurSphere.SetActive(true);
-        }
-        else
-        {
-            blurSphere.SetActive(false);
-            EventSystem.current.SetSelectedGameObject(null); //disables button selected color
-        }
+        MiniPlayer player = FindObjectOfType<MiniPlayer>();
+        if (player != null)
+            player.SimulateTracking();
     }
 
     void CameraButtonPress()
@@ -86,7 +79,6 @@ public class DebugUIManager : MonoBehaviour
         if (arSession.enabled)
         {
             arSession.enabled = false;
-            blurButton.interactable = false;
         }
         else
         {
