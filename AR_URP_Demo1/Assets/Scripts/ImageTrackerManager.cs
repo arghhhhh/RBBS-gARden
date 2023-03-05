@@ -28,6 +28,7 @@ public class ImageTrackerManager : MonoBehaviour
     public delegate void ImageLost();
     public event ImageTracked ImageLostEvent;
     public static bool tracked;
+    public bool ar;
 
     public string currentRef { get; private set; }
 
@@ -61,7 +62,8 @@ public class ImageTrackerManager : MonoBehaviour
         fullPlayer = FindObjectOfType<FullPlayer>();
         refLibrary = arTrackedImageManager.referenceLibrary;
         refImageCount = refLibrary.count;
-        LoadObjectDictionary();
+        if (ar)
+            LoadObjectDictionary();
     }
 
     void LoadObjectDictionary()
@@ -84,7 +86,8 @@ public class ImageTrackerManager : MonoBehaviour
     void ActivateTrackedObject(string imageName)
     {
         Debug.Log("Tracked the target: " + imageName);
-        allObjects[imageName].SetActive(true); //need to disable this as well to prevent prefabs from loading smh
+        if (ar)
+            allObjects[imageName].SetActive(true); //need to disable this as well to prevent prefabs from loading smh
 
         //DEBUG
         {
@@ -112,12 +115,15 @@ public class ImageTrackerManager : MonoBehaviour
             }
 
             //AR
-            if (!fullPlayer.shield.activeSelf) //hide tracked image prefab when fullscreen player is open
+            if (ar)
             {
-                allObjects[trackedImage.referenceImage.name].SetActive(true); //set ar prefab object to active
-                allObjects[trackedImage.referenceImage.name].transform.position = trackedImage.transform.position;
-                allObjects[trackedImage.referenceImage.name].transform.rotation = trackedImage.transform.rotation;
-                allObjects[trackedImage.referenceImage.name].transform.Rotate(90, 0, 0); //rotate image prefab to correct orientation
+                if (!fullPlayer.shield.activeSelf) //hide tracked image prefab when fullscreen player is open
+                {
+                    allObjects[trackedImage.referenceImage.name].SetActive(true); //set ar prefab object to active
+                    allObjects[trackedImage.referenceImage.name].transform.position = trackedImage.transform.position;
+                    allObjects[trackedImage.referenceImage.name].transform.rotation = trackedImage.transform.rotation;
+                    //allObjects[trackedImage.referenceImage.name].transform.Rotate(90, 0, 0); //rotate image prefab to correct orientation
+                }
             }
         }
 
@@ -135,7 +141,8 @@ public class ImageTrackerManager : MonoBehaviour
             }
 
             //AR
-            allObjects[trackedImage.referenceImage.name].SetActive(false);
+            if (ar)
+                allObjects[trackedImage.referenceImage.name].SetActive(false);
         }
 
         //DEBUG

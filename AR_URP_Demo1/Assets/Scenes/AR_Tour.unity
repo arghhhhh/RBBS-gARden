@@ -1502,6 +1502,7 @@ MonoBehaviour:
   - {fileID: 7087315375331649011, guid: 6c4519c230d468f4fb079fe97a84ef8a, type: 3}
   debugText: {fileID: 0}
   debugTextValue: {fileID: 0}
+  fullPlayerShield: {fileID: 657226172}
 --- !u!114 &1314809343
 MonoBehaviour:
   m_ObjectHideFlags: 0
